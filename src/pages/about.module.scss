@@ -1,0 +1,33 @@
+.heading {
+  display: flex;
+  img {
+    height: 3rem;
+    width: 3rem;
+    margin-right: 1rem;
+  }
+  h3 {
+    font-style: normal;
+    font-size: 2rem;
+  }
+  margin-bottom: 4rem;
+}
+
+.profile {
+  h3 {
+    font-style: normal;
+    font-weight: 200;
+    padding: 1rem 0;
+  }
+  p {
+    font-size: 1rem;
+    padding: 2rem 0;
+  }
+  ul {
+    margin-top: 1rem;
+    list-style-type: none;
+    font-size: 1.2rem;
+    li {
+      padding-left: 1.5rem;
+    }
+  }
+}
