@@ -1,6 +1,9 @@
 import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import headerStyles from "./header.module.scss"
+import logo from "../imgages/logo.png"
+import aboutIcon from "../imgages/about-icon.png"
+import categoriesIcon from "../imgages/categories-icon.png"
 
 const Header = () => {
   const data = useStaticQuery(graphql`
@@ -17,11 +20,7 @@ const Header = () => {
     <header className={headerStyles.header}>
       <h1>
         <Link className={headerStyles.title} to="/">
-          <img
-            src="/static/aab4da6911d4e45342c4e7d8638881de/logo.png"
-            alt="logo"
-            className={headerStyles.img}
-          />
+          <img src={logo} alt="logo" className={headerStyles.img} />
           {data.site.siteMetadata.title}
         </Link>
       </h1>
@@ -33,10 +32,7 @@ const Header = () => {
               activeClassName={headerStyles.activeNavItem}
               to="/about"
             >
-              <img
-                src="/static/50934264b068c36ad33b3c245446f882/about-icon.png"
-                alt="about-icon"
-              />
+              <img src={aboutIcon} alt="about-icon" />
               About
             </Link>
           </li>
@@ -46,10 +42,7 @@ const Header = () => {
               activeClassName={headerStyles.activeNavItem}
               to="/categories"
             >
-              <img
-                src="/static/799acfe67a317ab4a4ab5f9d9fc22ddb/categories-icon.png"
-                alt="categories-icon"
-              />
+              <img src={categoriesIcon} alt="categories-icon" />
               Categories
             </Link>
           </li>

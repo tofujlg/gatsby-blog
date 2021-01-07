@@ -3,6 +3,7 @@ import { Link, graphql, useStaticQuery } from "gatsby"
 import Layout from "../components/layout"
 import Head from "../components/head"
 import indexStyles from "./index.module.scss"
+import blogIcon from "../imgages/blog-icon.png"
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -26,7 +27,7 @@ const IndexPage = () => {
     <Layout>
       <Head title="Home" />
       <div className={indexStyles.heading}>
-        <img src="icons/blog-icon.png" alt="blog-icon" />
+        <img src={blogIcon} alt="blog-icon" />
         <h2>Blog Posts</h2>
       </div>
 
