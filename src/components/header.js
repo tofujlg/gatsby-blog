@@ -26,7 +26,7 @@ const Header = () => {
       </h1>
       <nav>
         <ul className={headerStyles.navList}>
-          <li>
+          <li className={headerStyles.about}>
             <Link
               className={headerStyles.navItem}
               activeClassName={headerStyles.activeNavItem}
@@ -36,7 +36,7 @@ const Header = () => {
               About
             </Link>
           </li>
-          <li>
+          <li className={headerStyles.categories}>
             <Link
               className={headerStyles.navItem}
               activeClassName={headerStyles.activeNavItem}

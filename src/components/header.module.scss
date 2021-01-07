@@ -11,6 +11,10 @@
   img {
     width: 2rem;
     height: 2rem;
+    margin-right: 0.4rem;
+  }
+  &:hover {
+    opacity: 0.8;
   }
 }
 
@@ -21,6 +25,7 @@
   img {
     width: 1.9rem;
     height: 1.8rem;
+    padding-right: 0.5rem;
   }
 }
 
@@ -36,5 +41,7 @@
 }
 
 .active-nav-item {
-  color: #333333;
+  color: #585257;
+  padding: 0 0 0.33rem 0;
+  border-bottom: #585257 dashed 2px;
 }
