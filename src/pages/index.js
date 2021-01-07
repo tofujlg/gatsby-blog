@@ -1,17 +1,47 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, graphql, useStaticQuery } from "gatsby"
 import Layout from "../components/layout"
 import Head from "../components/head"
+import indexStyles from "./index.module.scss"
 
 const IndexPage = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+        edges {
+          node {
+            frontmatter {
+              title
+              date
+            }
+            fields {
+              slug
+            }
+          }
+        }
+      }
+    }
+  `)
   return (
     <Layout>
       <Head title="Home" />
-      <h1>K-log</h1>
-      <h2>Blog Posts</h2>
-      <p>
-        Check out<Link to="/blog">My blog posts</Link>
-      </p>
+      <div className={indexStyles.heading}>
+        <img src="icons/blog-icon.png" alt="blog-icon" />
+        <h2>Blog Posts</h2>
+      </div>
+
+      <ol className={indexStyles.posts}>
+        {data.allMarkdownRemark.edges.map(edge => {
+          return (
+            <li className={indexStyles.post}>
+              <Link to={`/blog/${edge.node.fields.slug}`}>
+                <h2>{edge.node.frontmatter.title}</h2>
+                <p>{edge.node.frontmatter.date}</p>
+              </Link>
+            </li>
+          )
+        })}
+      </ol>
     </Layout>
   )
 }
