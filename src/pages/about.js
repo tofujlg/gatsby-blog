@@ -8,7 +8,7 @@ import aboutStyles from './about.module.scss'
 const AboutPage = () => {
   return (
     <Layout>
-      <Head title="About" />
+    <Head title="About" />
       <div className={aboutStyles.heading}>
       <img src={aboutIcon} alt="about-icon" />
       <h3>About Me</h3>

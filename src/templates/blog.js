@@ -1,8 +1,9 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import Head from "../components/head"
 import blogStyles from "./blog.module.scss"
+import _ from "lodash"
 
 export const query = graphql`
   query($slug: String!) {
@@ -10,6 +11,7 @@ export const query = graphql`
       frontmatter {
         title
         date
+        tags
       }
       html
     }
@@ -27,6 +29,18 @@ const Blog = props => {
         <p className={blogStyles.date}>
           {props.data.markdownRemark.frontmatter.date}
         </p>
+        <div className={blogStyles.tagsWrapper}>
+          {props.data.markdownRemark.frontmatter.tags.map(tag => {
+            return (
+              <Link
+                className={blogStyles.tag}
+                to={`/tags/${_.kebabCase(tag)}/`}
+              >
+                {tag}
+              </Link>
+            )
+          })}
+        </div>
         <div
           dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }}
           className={blogStyles.blogPost}

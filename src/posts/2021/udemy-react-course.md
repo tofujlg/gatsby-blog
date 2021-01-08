@@ -1,6 +1,8 @@
 ---
 title: "Udemy React Developer Courseを終えて"
 date: "2021-01-04"
+tags: ["React"]
+
 ---
 
 Udemy の初心者用の React 学習コース「The Complete React Developer Course 」を終えたので、感想を書き残しておきたい。

@@ -36,14 +36,14 @@ const Header = () => {
               About
             </Link>
           </li>
-          <li className={headerStyles.categories}>
+          <li className={headerStyles.tags}>
             <Link
               className={headerStyles.navItem}
               activeClassName={headerStyles.activeNavItem}
-              to="/categories"
+              to="/tags"
             >
               <img src={categoriesIcon} alt="categories-icon" />
-              Categories
+              Tags
             </Link>
           </li>
         </ul>
