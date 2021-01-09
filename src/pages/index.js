@@ -45,6 +45,8 @@ const IndexPage = () => {
           )
         })}
       </ol>
+      <p>ここには最新10記事ぐらいにして下から/blogへ</p>
+      <Link to="/blog">Read More</Link>
     </Layout>
   )
 }

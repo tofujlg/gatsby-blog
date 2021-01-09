@@ -12,7 +12,7 @@ starter: my-hello-world-starter https://github.com/gatsbyjs/gatsby-starter-hello
 ## Commit log
 
 - 2021/01/08
-  Added categories functionality
+  Added Tag functionality
 
 - 2021/01/07
   Styled navbar.

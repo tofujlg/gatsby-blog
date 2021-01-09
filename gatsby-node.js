@@ -1,5 +1,4 @@
 const path = require("path")
-// Test
 const _ = require("lodash")
 
 module.exports.onCreateNode = ({ node, actions }) => {
@@ -17,25 +16,9 @@ module.exports.onCreateNode = ({ node, actions }) => {
 module.exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
   const blogTemplate = path.resolve("./src/templates/blog.js")
-  // test
   const tagTemplate = path.resolve("src/templates/tags.js")
 
-  /*
-  const res = await graphql(`
-    query {
-      allMarkdownRemark {
-        edges {
-          node {
-            fields {
-              slug
-            }
-          }
-        }
-      }
-    }
-  `)
-  */
-
+  // Query for posts' frontmatter, next/prev posts and tags
   const res = await graphql(`
     {
       postsRemark: allMarkdownRemark(
@@ -61,11 +44,28 @@ module.exports.createPages = async ({ graphql, actions }) => {
     }
   `)
 
-  // tesst
-  // if (result.errors) {
-  //   reporter.panicOnBuild(`Error while running GraphQL query.`)
-  //   return
-  // }
+  // Catching error
+  if (res.errors) {
+    reporter.panicOnBuild(`Error while running GraphQL query.`)
+    return
+  }
+  // Create blog-list
+  const posts = res.data.postsRemark.edges
+  const postsPerPage = 2
+  const numPages = Math.ceil(posts.length / postsPerPage)
+  Array.from({ length: numPages }).forEach((_, i) => {
+    createPage({
+      path: i === 0 ? `/blog` : `/blog/${i + 1}`,
+      component: path.resolve("./src/templates/blog-list.js"),
+      context: {
+        limit: postsPerPage,
+        skip: i * postsPerPage,
+        numPages,
+        currentPage: i + 1,
+      },
+    })
+  })
+
   // Create each blog posts
   res.data.postsRemark.edges.forEach(edge => {
     createPage({
