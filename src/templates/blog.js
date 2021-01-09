@@ -45,6 +45,21 @@ const Blog = props => {
           dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }}
           className={blogStyles.blogPost}
         ></div>
+        {console.log(props.pageContext.prev)}
+        {console.log(props.pageContext.next)}
+      </div>
+      <div>
+        {props.pageContext.prev && (
+          <Link to={`/blog/${props.pageContext.prev.fields.slug}`}>
+            {props.pageContext.prev.frontmatter.title}
+          </Link>
+        )}
+        <br />
+        {props.pageContext.next && (
+          <Link to={`/blog/${props.pageContext.next.fields.slug}`}>
+            {props.pageContext.next.frontmatter.title}
+          </Link>
+        )}
       </div>
     </Layout>
   )

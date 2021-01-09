@@ -34,6 +34,22 @@ module.exports.createPages = async ({ graphql, actions }) => {
               tags
             }
           }
+          next {
+            fields {
+              slug
+            }
+            frontmatter {
+              title
+            }
+          }
+          prev: previous {
+            fields {
+              slug
+            }
+            frontmatter {
+              title
+            }
+          }
         }
       }
       tagsGroup: allMarkdownRemark(limit: 2000) {
@@ -73,6 +89,8 @@ module.exports.createPages = async ({ graphql, actions }) => {
       path: `/blog/${edge.node.fields.slug}`,
       context: {
         slug: edge.node.fields.slug,
+        next: edge.next,
+        prev: edge.prev,
       },
     })
   })
