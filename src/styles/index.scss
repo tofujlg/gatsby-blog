@@ -1,10 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300&display=swap");
 
-* {
-  margin: 0;
-  padding: 0;
-}
-
 // body {
 //   //background: #dfdfdf;
 //   background: #e5e5e5;
@@ -16,6 +11,7 @@
 
 body {
   font-family: sans-serif, "Noto Sans CJK JP", "Noto Sans JP", Arial, Helvetica;
+  color: red;
   --anchorLink: #3273dc;
   --navbarBackground: whitesmoke;
   --navbarColor: #363636;
@@ -36,8 +32,6 @@ body.dark {
   background: #000008;
   color: #fff;
   --textColor: red;
-  --boxShadow1: rgba(249, 251, 82, 0.13);
-  --boxShadow2: rgba(232, 248, 85, 0.19);
 }
 .content blockquote {
   background-color: var(--navbarBackground);
