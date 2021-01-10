@@ -1,14 +1,9 @@
-.post {
-  font-family: sans-serif, "Noto Sans CJK JP", "Noto Sans JP", Arial, Helvetica;
-}
-
 /////
 .title {
   margin: 6rem 0 2rem 0;
   text-align: center;
   font-weight: 100;
   font-style: normal;
-  color: #222222;
 }
 //////
 
@@ -16,7 +11,6 @@
   margin: 2rem 0 3rem 0;
   text-align: center;
   font-style: italic;
-  color: grey;
 }
 
 .tags-wrapper {
@@ -26,7 +20,6 @@
 }
 
 .tag {
-  color: rgb(116, 105, 105);
   text-decoration: none;
   margin-right: 0.7rem;
   &:hover {
@@ -35,8 +28,8 @@
 }
 
 .blog-post {
+  // Style each headings
   line-height: 1.9;
-  color: #444;
   h1,
   h2,
   h3,

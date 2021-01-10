@@ -5,9 +5,46 @@
   padding: 0;
 }
 
+// body {
+//   //background: #dfdfdf;
+//   background: #e5e5e5;
+//   font-family: "Darker Grotesque", sans-serif, "Noto Sans CJK JP",
+//     "Noto Sans JP", Arial, Helvetica;
+// }
+
+///--- test ----
+
 body {
-  //background: #dfdfdf;
-  background: #e5e5e5;
-  font-family: "Darker Grotesque", sans-serif, "Noto Sans CJK JP",
-    "Noto Sans JP", Arial, Helvetica;
+  font-family: sans-serif, "Noto Sans CJK JP", "Noto Sans JP", Arial, Helvetica;
+  --anchorLink: #3273dc;
+  --navbarBackground: whitesmoke;
+  --navbarColor: #363636;
+  --bg: #ffffff;
+  --textColor: #222;
+  --inlineCode-bg: #f0da4f33;
+  --inlineCode-text: inherit;
+  --boxShadow1: rgba(0, 0, 0, 0.13);
+  --boxShadow2: rgba(0, 0, 0, 0.19);
+  background-color: var(--bg);
+}
+
+body.dark {
+  -webkit-font-smoothing: antialiased;
+  --anchorLink: #f0da4f;
+  --navbarBackground: #000008;
+  --navbarColor: white;
+  background: #000008;
+  color: #fff;
+  --textColor: red;
+  --boxShadow1: rgba(249, 251, 82, 0.13);
+  --boxShadow2: rgba(232, 248, 85, 0.19);
+}
+.content blockquote {
+  background-color: var(--navbarBackground);
+}
+.content h1,
+.content h2,
+.content h3,
+.content li {
+  color: red;
 }

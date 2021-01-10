@@ -4,6 +4,7 @@ module.exports = {
     author: "K",
   },
   plugins: [
+    "gatsby-plugin-dark-mode",
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {

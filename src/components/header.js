@@ -1,6 +1,7 @@
 import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import headerStyles from "./header.module.scss"
+import DarkmodeToggle from "./darkModeToggle"
 import logo from "../imgages/logo.png"
 import aboutIcon from "../imgages/about-icon.png"
 import categoriesIcon from "../imgages/categories-icon.png"
@@ -45,6 +46,9 @@ const Header = () => {
               <img src={categoriesIcon} alt="categories-icon" />
               Tags
             </Link>
+          </li>
+          <li>
+            <DarkmodeToggle />
           </li>
         </ul>
       </nav>

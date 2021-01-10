@@ -11,6 +11,9 @@ starter: my-hello-world-starter https://github.com/gatsbyjs/gatsby-starter-hello
 
 ## Commit log
 
+- 2021/01/10
+  Added Google analytics
+
 - 2021/01/08
   Added Tag functionality
 
