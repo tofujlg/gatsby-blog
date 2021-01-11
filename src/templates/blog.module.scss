@@ -58,6 +58,9 @@
   p {
     margin: 0.5rem 0;
   }
+  img {
+    box-shadow: #d9bcd8 10px 10px 10px 10px;
+  }
 }
 
 .articles {
@@ -72,17 +75,4 @@
   p {
     text-align: right;
   }
-}
-
-// Gatby-prism.js
-
-.gatsby-code-title {
-  background: #2e96b5;
-  color: #eee;
-  padding: 6px 12px;
-  font-size: 0.8em;
-  line-height: 1;
-  font-weight: bold;
-  display: table;
-  border-radius: 4px 4px 0 0;
 }
