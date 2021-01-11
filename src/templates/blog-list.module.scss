@@ -1,9 +1,7 @@
 .posts {
   margin: 1rem 0 5rem 0;
-  text-align: center;
   ol {
     list-style-type: none;
-    margin-bottom: 6rem;
   }
   h3 {
     font-weight: 100;
@@ -24,6 +22,9 @@
     box-shadow: 0px;
     color: black;
   }
+  // a:hover{
+  //   color: #dfdfdf;
+  // }
 
   h2 {
     margin-bottom: 0;
@@ -46,15 +47,17 @@
   }
 }
 
-.alltags {
-  font-size: 1.6rem;
-  margin: 5rem;
-  color: #333;
-  padding: 0.5rem 1rem;
-  border: black solid 1px;
-  border-radius: 5px;
-  &:hover {
-    border: #a5a1a1 solid 1px;
-    color: #a5a1a1;
+.pages {
+  display: flex;
+  justify-content: space-between;
+  a {
+    color: #333;
+    padding: 0.3rem 0.7rem;
+    border: black solid 1px;
+    border-radius: 5px;
+    &:hover {
+      border: #a5a1a1 solid 1px;
+      color: #a5a1a1;
+    }
   }
 }

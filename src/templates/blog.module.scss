@@ -22,6 +22,9 @@
 .tag {
   text-decoration: none;
   margin-right: 0.7rem;
+  padding: 0.2rem 0.5rem;
+  border: solid black 1px;
+  border-radius: 5px;
   &:hover {
     opacity: 0.8;
   }
@@ -54,5 +57,19 @@
   }
   p {
     margin: 0.5rem 0;
+  }
+}
+
+.articles {
+  border-top: black solid 1px;
+  padding: 3rem 0 0 0;
+  margin: 5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.next-article {
+  p {
+    text-align: right;
   }
 }

@@ -12,7 +12,7 @@ class DarkmodeToggle extends React.Component {
               onChange={e => toggleTheme(e.target.checked ? "dark" : "light")}
               checked={theme === "dark"}
             />{" "}
-            Dark mode
+            Dark(α)
           </label>
         )}
       </ThemeToggler>

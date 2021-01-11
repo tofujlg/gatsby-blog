@@ -5,7 +5,6 @@ import { Helmet } from "react-helmet"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import tagsStyles from "./tags.module.scss"
-import categoriesIcon from "../imgages/categories-icon.png"
 
 const TagsPage = ({
   data: {
@@ -19,8 +18,7 @@ const TagsPage = ({
     <Helmet title={title} />
     <div>
       <div className={tagsStyles.heading}>
-        <img src={categoriesIcon} alt="categories-icon" />
-        <h1>Tags</h1>
+        <h3>Tags</h3>
       </div>
       <ul className={tagsStyles.tags}>
         {group.map(tag => (

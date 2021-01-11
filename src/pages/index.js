@@ -3,7 +3,6 @@ import { Link, graphql, useStaticQuery } from "gatsby"
 import Layout from "../components/layout"
 import Head from "../components/head"
 import indexStyles from "./index.module.scss"
-import blogIcon from "../imgages/blog-icon.png"
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -27,26 +26,27 @@ const IndexPage = () => {
   return (
     <Layout>
       <Head title="Home" />
-      <div className={indexStyles.heading}>
-        <img src={blogIcon} alt="blog-icon" />
-        <h2>Blog Posts</h2>
+      <div className={indexStyles.indexPosts}>
+        <div className={indexStyles.heading}>
+          <h3>Blog Posts</h3>
+        </div>
+        <ol className={indexStyles.posts}>
+          {data.allMarkdownRemark.edges.map(edge => {
+            return (
+              <li className={indexStyles.post}>
+                <Link to={`/blog/${edge.node.fields.slug}`}>
+                  <h2>{edge.node.frontmatter.title}</h2>
+                  <p>{edge.node.frontmatter.date}</p>
+                  <p>{edge.node.frontmatter.tags}</p>
+                </Link>
+              </li>
+            )
+          })}
+        </ol>
+        <Link to="/blog" className={indexStyles.moreArticles}>
+          More Articles
+        </Link>
       </div>
-
-      <ol className={indexStyles.posts}>
-        {data.allMarkdownRemark.edges.map(edge => {
-          return (
-            <li className={indexStyles.post}>
-              <Link to={`/blog/${edge.node.fields.slug}`}>
-                <h2>{edge.node.frontmatter.title}</h2>
-                <p>{edge.node.frontmatter.date}</p>
-                <p>{edge.node.frontmatter.tags}</p>
-              </Link>
-            </li>
-          )
-        })}
-      </ol>
-      <p>ここには最新10記事ぐらいにして下から/blogへ</p>
-      <Link to="/blog">Read More</Link>
     </Layout>
   )
 }

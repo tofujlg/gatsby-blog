@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
+import blogIndexStyles from "./blog-list.module.scss"
 
 export default class BlogList extends React.Component {
   render() {
@@ -14,30 +15,35 @@ export default class BlogList extends React.Component {
 
     return (
       <Layout>
-        <ol>
-          {posts.map(({ node }) => {
-            const title = node.frontmatter.title || node.fields.slug
-            return (
-              <li>
-                <Link to={`/blog/${node.fields.slug}`}>
-                  <h2>{title}</h2>
-                  <p>{node.fields.date}</p>
-                  <p>{node.fields.tags}</p>
-                </Link>
-              </li>
-            )
-          })}
-        </ol>
-        {!isFirst && (
-          <Link to={`/blog/${prevPage}`} rel="prev">
-            ← Prev
-          </Link>
-        )}
-        {!isLast && (
-          <Link to={`/blog/${nextPage}`} rel="next">
-            Next →
-          </Link>
-        )}
+        <div className={blogIndexStyles.posts}>
+          <h3>Blog Posts</h3>
+          <ol>
+            {posts.map(({ node }) => {
+              const title = node.frontmatter.title || node.fields.slug
+              return (
+                <li className={blogIndexStyles.post}>
+                  <Link to={`/blog/${node.fields.slug}`}>
+                    <h2>{title}</h2>
+                    <p>{node.frontmatter.date}</p>
+                    <p>{node.frontmatter.tags}</p>
+                  </Link>
+                </li>
+              )
+            })}
+          </ol>
+        </div>
+        <div className={blogIndexStyles.pages}>
+          {!isFirst && (
+            <Link to={`/blog/${prevPage}`} rel="prev">
+              ← Prev
+            </Link>
+          )}
+          {!isLast && (
+            <Link to={`/blog/${nextPage}`} rel="next">
+              Next →
+            </Link>
+          )}
+        </div>
       </Layout>
     )
   }
@@ -57,6 +63,8 @@ export const blogListQuery = graphql`
           }
           frontmatter {
             title
+            date
+            tags
           }
         }
       }

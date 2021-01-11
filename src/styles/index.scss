@@ -1,40 +1,37 @@
-@import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300&display=swap");
+@import "./variables";
 
-// body {
-//   //background: #dfdfdf;
-//   background: #e5e5e5;
-//   font-family: "Darker Grotesque", sans-serif, "Noto Sans CJK JP",
-//     "Noto Sans JP", Arial, Helvetica;
-// }
-
-///--- test ----
+// --- General Styles ----
+* {
+  margin: 0;
+  padding: 0;
+}
 
 body {
   font-family: sans-serif, "Noto Sans CJK JP", "Noto Sans JP", Arial, Helvetica;
-  color: red;
-  --anchorLink: #3273dc;
-  --navbarBackground: whitesmoke;
-  --navbarColor: #363636;
-  --bg: #ffffff;
-  --textColor: #222;
-  --inlineCode-bg: #f0da4f33;
-  --inlineCode-text: inherit;
-  --boxShadow1: rgba(0, 0, 0, 0.13);
-  --boxShadow2: rgba(0, 0, 0, 0.19);
-  background-color: var(--bg);
+  color: #333;
+  line-height: 1.6;
+  background: #fff;
+  // --anchorLink: #3273dc;
+  // --navbarBackground: whitesmoke;
+  // --navbarColor: #363636;
+  // --inlineCode-bg: #f0da4f33;
+  // --inlineCode-text: inherit;
+  // --boxShadow1: rgba(0, 0, 0, 0.13);
+  // --boxShadow2: rgba(0, 0, 0, 0.19);
+}
+
+a {
+  text-decoration: none;
+  color: #333;
 }
 
 body.dark {
-  -webkit-font-smoothing: antialiased;
-  --anchorLink: #f0da4f;
-  --navbarBackground: #000008;
-  --navbarColor: white;
+  // -webkit-font-smoothing: antialiased;
   background: #000008;
   color: #fff;
-  --textColor: red;
 }
 .content blockquote {
-  background-color: var(--navbarBackground);
+  background-color: #000;
 }
 .content h1,
 .content h2,
@@ -42,3 +39,11 @@ body.dark {
 .content li {
   color: red;
 }
+
+// --- Previous body data -----
+// body {
+//   //background: #dfdfdf;
+//   background: #e5e5e5;
+//   font-family: "Darker Grotesque", sans-serif, "Noto Sans CJK JP",
+//     "Noto Sans JP", Arial, Helvetica;
+// }
