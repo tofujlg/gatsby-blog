@@ -11,8 +11,7 @@ Gatsby製のブログで記事の最後に前後記事へのリンクを追加�
 　GraphQLで前後の記事のデータを取得します。それぞれnext,prevで指定できます。このブログではマークダウンのファイル名をslugとして利用しているので、slugとtitleを指定。
 
  
-- gatsby-node.js
-```javaScript
+```javascript:title=prismjs.js
   const res = await graphql(`
     {
       postsRemark: allMarkdownRemark(

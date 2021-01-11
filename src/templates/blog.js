@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import Head from "../components/head"
 import blogStyles from "./blog.module.scss"
 import _ from "lodash"
+import "prismjs/themes/prism-tomorrow.css"
 
 export const query = graphql`
   query($slug: String!) {

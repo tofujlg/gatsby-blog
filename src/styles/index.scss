@@ -40,6 +40,50 @@ body.dark {
   color: red;
 }
 
+//---- For gatsby-remark-code-titles plugin ---
+
+.gatsby-code-title {
+  background: #5555;
+  color: #ffffff;
+  margin-bottom: -0.7em;
+  padding: 1rem;
+  font-size: 0.9em;
+  line-height: 0.3;
+  font-weight: 800;
+  border-radius: 5px 5px 0 0;
+  display: table;
+}
+
+// --- For Prismjs
+
+.gatsby-highlight {
+  background-color: #2d2d2d;
+  margin: 0.5em 0;
+  padding: 1em;
+  overflow: auto;
+}
+.gatsby-highlight pre[class*="language-"] {
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  overflow: initial;
+  float: left;
+  min-width: 100%;
+}
+.gatsby-highlight-code-line {
+  background-color: #545454;
+  display: block;
+  margin-right: -1em;
+  margin-left: -1em;
+  padding-right: 1em;
+  padding-left: 0.75em;
+  border-left: 0.25em solid #c1e4e9;
+}
+
+.gatsby-highlight pre[class*="language-"].line-numbers {
+  padding-left: 2.8em;
+}
+
 // --- Previous body data -----
 // body {
 //   //background: #dfdfdf;
