@@ -11,6 +11,7 @@ body {
   color: #333;
   line-height: 1.6;
   background: #fff;
+  transition: 0.8s;
 }
 
 a {
@@ -76,3 +77,7 @@ body.dark {
 //   font-family: "Darker Grotesque", sans-serif, "Noto Sans CJK JP",
 //     "Noto Sans JP", Arial, Helvetica;
 // }
+
+.gatsby-resp-image-wrapper {
+  box-shadow: black 1px 1px 5px;
+}

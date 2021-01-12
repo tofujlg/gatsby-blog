@@ -50,9 +50,9 @@ Gatsby製のブログで記事の最後に前後記事へのリンクを追加�
 ```
 > ここでpostRemarkとなっているのは同じクエリ内にタグを指定する別のallMarkdownRemarkがあるからです。
 
-- gatsby-node.js
+
 ブログテンプレートに前後記事のデータをpropsとして渡します。
-```JavaScript
+```JavaScript:title=gatsby-node.js
  res.data.postsRemark.edges.forEach(edge => {
     createPage({
       component: blogTemplate,
@@ -68,8 +68,8 @@ Gatsby製のブログで記事の最後に前後記事へのリンクを追加�
 
 ### ブログテンプレートの編集
 next,prevは props.pageContext経由で取得できます。
-- blog.js
-```JavaScript
+
+```JavaScript:title=blogTemplate.js
 	//...省略
       <div>
         {props.pageContext.prev && (

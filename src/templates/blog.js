@@ -1,10 +1,11 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import Layout from "../components/layout"
-import Head from "../components/head"
-import blogStyles from "./blog.module.scss"
 import _ from "lodash"
 import "prismjs/themes/prism-tomorrow.css"
+import Layout from "../components/layout"
+import Head from "../components/head"
+import TableOfContents from "../components/tableOfContents"
+import blogStyles from "./blog.module.scss"
 
 export const query = graphql`
   query($slug: String!) {
@@ -15,6 +16,15 @@ export const query = graphql`
         tags
       }
       html
+      tableOfContents
+      fields {
+        slug
+      }
+      headings {
+        depth
+        id
+        value
+      }
     }
   }
 `
@@ -30,6 +40,10 @@ const Blog = props => {
         <p className={blogStyles.date}>
           {props.data.markdownRemark.frontmatter.date}
         </p>
+        <TableOfContents
+          slug={props.data.markdownRemark.fields.slug}
+          headings={props.data.markdownRemark.headings}
+        />
         <div className={blogStyles.tagsWrapper}>
           {props.data.markdownRemark.frontmatter.tags.map(tag => {
             return (
