@@ -2,7 +2,7 @@
 title: "Gatsby.js Prismjsプラグインでシンタックスハイライトを追加する"
 date: "2021-01-11"
 tags: ["Gatsby"]
-hero: ./screenshot.png
+hero: ../../images/Gatsby.jpeg
 ---
 
 ## 目標
