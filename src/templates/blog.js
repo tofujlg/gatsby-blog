@@ -16,12 +16,10 @@ export const query = graphql`
         tags
       }
       html
-      tableOfContents
       fields {
         slug
       }
       headings {
-        depth
         id
         value
       }
@@ -40,10 +38,7 @@ const Blog = props => {
         <p className={blogStyles.date}>
           {props.data.markdownRemark.frontmatter.date}
         </p>
-        <TableOfContents
-          slug={props.data.markdownRemark.fields.slug}
-          headings={props.data.markdownRemark.headings}
-        />
+        <TableOfContents headings={props.data.markdownRemark.headings} />
         <div className={blogStyles.tagsWrapper}>
           {props.data.markdownRemark.frontmatter.tags.map(tag => {
             return (

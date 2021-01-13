@@ -1,5 +1,5 @@
 ---
-title: "Gatsby.js: Prismjsプラグインでシンタックスハイライトを追加する"
+title: "Gatsby.js Prismjsプラグインでシンタックスハイライトを追加する"
 date: "2021-01-11"
 tags: ["Gatsby"]
 ---
