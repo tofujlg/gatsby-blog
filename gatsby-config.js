@@ -4,7 +4,6 @@ module.exports = {
     author: "K",
   },
   plugins: [
-    "gatsby-plugin-dark-mode",
     {
       resolve: "gatsby-plugin-google-analytics",
       options: {
@@ -12,6 +11,7 @@ module.exports = {
         head: true,
       },
     },
+    "gatsby-plugin-dark-mode",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sass",
     {
@@ -22,6 +22,7 @@ module.exports = {
       },
     },
     "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
     {
       resolve: "gatsby-transformer-remark",
       options: {

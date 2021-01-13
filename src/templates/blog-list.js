@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
+import Image from "gatsby-image"
 import Layout from "../components/layout"
 import blogIndexStyles from "./blog-list.module.scss"
 
@@ -24,6 +25,11 @@ export default class BlogList extends React.Component {
                 <li className={blogIndexStyles.post}>
                   <Link to={`/blog/${node.fields.slug}`}>
                     <h2>{title}</h2>
+                    {node.frontmatter.hero && (
+                      <Image
+                        fixed={node.frontmatter.hero.childImageSharp.fixed}
+                      />
+                    )}
                     <p>{node.frontmatter.date}</p>
                     <p>{node.frontmatter.tags}</p>
                   </Link>
@@ -65,6 +71,13 @@ export const blogListQuery = graphql`
             title
             date
             tags
+            hero {
+              childImageSharp {
+                fixed(width: 128, height: 128) {
+                  ...GatsbyImageSharpFixed
+                }
+              }
+            }
           }
         }
       }

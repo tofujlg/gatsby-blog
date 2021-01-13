@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import Image from "gatsby-image"
 import _ from "lodash"
 import "prismjs/themes/prism-tomorrow.css"
 import Layout from "../components/layout"
@@ -14,6 +15,13 @@ export const query = graphql`
         title
         date
         tags
+        hero {
+          childImageSharp {
+            fluid(maxWidth: 1280) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
       html
       fields {
@@ -31,6 +39,13 @@ const Blog = props => {
   return (
     <Layout>
       <div className={blogStyles.post}>
+        {props.data.markdownRemark.frontmatter.hero && (
+          <Image
+            fluid={
+              props.data.markdownRemark.frontmatter.hero.childImageSharp.fluid
+            }
+          />
+        )}
         <Head title={props.data.markdownRemark.frontmatter.title} />
         <h1 className={blogStyles.title}>
           {props.data.markdownRemark.frontmatter.title}
