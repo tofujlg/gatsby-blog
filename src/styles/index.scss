@@ -12,6 +12,8 @@ body {
   line-height: 1.6;
   background: #fff;
   transition: 0.8s;
+  --post-card-bg-hover: #e7e7e7;
+  --post-emoji-bg: #e7e7e7;
 }
 
 a {
@@ -20,22 +22,14 @@ a {
 }
 
 body.dark {
-  // -webkit-font-smoothing: antialiased;
   background: #15181e;
   color: #fff;
+  --post-card-bg-hover: rgb(49 55 70);
+  --post-emoji-bg: rgb(49 55 70);
 
   a {
     color: $dark-p-text;
   }
-}
-.content blockquote {
-  background-color: #000;
-}
-.content h1,
-.content h2,
-.content h3,
-.content li {
-  color: red;
 }
 
 //---- For gatsby-remark-code-titles plugin ---

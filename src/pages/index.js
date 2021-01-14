@@ -8,7 +8,10 @@ import indexStyles from "./index.module.scss"
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
     query {
-      allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+      allMarkdownRemark(
+        sort: { fields: [frontmatter___date], order: DESC }
+        limit: 5
+      ) {
         edges {
           node {
             frontmatter {
@@ -52,7 +55,7 @@ const IndexPage = () => {
             )
           })}
         </ol>
-        <Link to="/blog" className={indexStyles.moreArticles}>
+        <Link to="/blog/2" className={indexStyles.moreArticles}>
           More Articles
         </Link>
       </div>

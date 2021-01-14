@@ -1,18 +1,20 @@
 .post-card {
-  border-top: solid 1px black;
   a {
+    border-top: solid 1px black;
     display: flex;
     flex-direction: row;
     padding: 1.4em 0;
+    &:hover {
+      background: var(--post-card-bg-hover);
+    }
   }
 }
-
 .post-card-emoji {
   background: #333;
   display: flex;
   justify-content: center;
   align-items: center !important;
-  background: #dfdfdf;
+  background: var(--post-emoji-bg);
   margin: 0;
   border-radius: 4px;
   width: 90px;
