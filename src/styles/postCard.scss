@@ -1,0 +1,29 @@
+.post-card {
+  border-top: solid 1px black;
+  a {
+    display: flex;
+    flex-direction: row;
+    padding: 1.4em 0;
+  }
+}
+
+.post-card-emoji {
+  background: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center !important;
+  background: #dfdfdf;
+  margin: 0;
+  border-radius: 4px;
+  width: 90px;
+  height: 90px;
+  img {
+    width: 2rem !important ;
+    height: 2rem !important;
+  }
+}
+
+.post-card-content {
+  width: calc(100% - 90px);
+  padding-left: 20px;
+}

@@ -1,6 +1,7 @@
-@import "../styles/emojiHero.scss";
+@import "../styles/postCard.scss";
 
-.posts {
+// Post lists
+.posts-list {
   margin: 1rem 0 5rem 0;
   ol {
     list-style-type: none;
@@ -13,38 +14,7 @@
   }
 }
 
-.post {
-  margin: 1rem 0;
-
-  a {
-    display: block;
-    padding: 1rem;
-    text-decoration: none;
-    border-bottom: solid 1px #827f7f;
-    box-shadow: 0px;
-    color: black;
-  }
-  h2 {
-    margin-bottom: 0;
-    font-weight: 400;
-    font-style: normal;
-    text-align: center;
-  }
-  p {
-    font-size: 0.8rem;
-    font-style: italic;
-    text-align: center;
-    color: #555;
-  }
-  &:hover {
-    a,
-    h2,
-    p {
-      color: #a5a1a1;
-    }
-  }
-}
-
+// Pagination
 .pages {
   display: flex;
   justify-content: space-between;

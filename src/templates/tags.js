@@ -22,12 +22,18 @@ const Tags = ({ pageContext, data }) => {
             const { title } = node.frontmatter
             const blogSlug = `/blog/${slug}`
             return (
-              <li key={slug} className={tagsStyles.post}>
+              <li key={slug} className={tagsStyles.postCard}>
                 <Link to={blogSlug}>
-                  <h2>{title}</h2>
-                  <Twemoji svg text={node.frontmatter.emoji || "📝"} />
-                  <p>{node.frontmatter.date}</p>
-                  <p>{node.frontmatter.tags}</p>
+                  <Twemoji
+                    className={tagsStyles.postCardEmoji}
+                    svg
+                    text={node.frontmatter.emoji || "📝"}
+                  />
+                  <div className={tagsStyles.postCardContent}>
+                    <h2>{title}</h2>
+                    <p>{node.frontmatter.date}</p>
+                    <p>{node.frontmatter.tags}</p>
+                  </div>
                 </Link>
               </li>
             )

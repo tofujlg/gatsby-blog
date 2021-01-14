@@ -17,22 +17,24 @@ export default class BlogList extends React.Component {
 
     return (
       <Layout>
-        <div className={blogIndexStyles.posts}>
+        <div className={blogIndexStyles.postsList}>
           <h3>Blog Posts</h3>
           <ol>
             {posts.map(({ node }) => {
               const title = node.frontmatter.title || node.fields.slug
               return (
-                <li className={blogIndexStyles.post}>
-                  <Twemoji
-                    className={blogIndexStyles.emojiWrapper}
-                    svg
-                    text={node.frontmatter.emoji || "📝"}
-                  />
+                <li className={blogIndexStyles.postCard}>
                   <Link to={`/blog/${node.fields.slug}`}>
-                    <h2>{title}</h2>
-                    <p>{node.frontmatter.date}</p>
-                    <p>{node.frontmatter.tags}</p>
+                    <Twemoji
+                      className={blogIndexStyles.postCardEmoji}
+                      svg
+                      text={node.frontmatter.emoji || "📝"}
+                    />
+                    <div className={blogIndexStyles.postCardContent}>
+                      <h2>{title}</h2>
+                      <h4>{node.frontmatter.date}</h4>
+                      <p>{node.frontmatter.tags}</p>
+                    </div>
                   </Link>
                 </li>
               )

@@ -35,16 +35,18 @@ const IndexPage = () => {
         <ol className={indexStyles.posts}>
           {data.allMarkdownRemark.edges.map(edge => {
             return (
-              <li className={indexStyles.post}>
-                <Twemoji
-                  className={indexStyles.emojiWrapper}
-                  svg
-                  text={edge.node.frontmatter.emoji || "📝"}
-                />
+              <li className={indexStyles.postCard}>
                 <Link to={`/blog/${edge.node.fields.slug}`}>
-                  <h2>{edge.node.frontmatter.title}</h2>
-                  <p>{edge.node.frontmatter.date}</p>
-                  <p>{edge.node.frontmatter.tags}</p>
+                  <Twemoji
+                    className={indexStyles.postCardEmoji}
+                    svg
+                    text={edge.node.frontmatter.emoji || "📝"}
+                  />
+                  <div className={indexStyles.postCardContent}>
+                    <h2>{edge.node.frontmatter.title}</h2>
+                    <p>{edge.node.frontmatter.date}</p>
+                    <p>{edge.node.frontmatter.tags}</p>
+                  </div>
                 </Link>
               </li>
             )
