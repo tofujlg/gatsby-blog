@@ -66,22 +66,24 @@ const Blog = props => {
         {console.log(props.pageContext.prev)}
         {console.log(props.pageContext.next)}
       </div>
-      <div className={blogStyles.articles}>
-        {props.pageContext.prev && (
-          <Link to={`/blog/${props.pageContext.prev.fields.slug}`}>
-            <p>←Previous Post</p>
-            <h3>{props.pageContext.prev.frontmatter.title}</h3>
-          </Link>
-        )}
-        <div className={blogStyles.nextArticle}>
+      <ul className={blogStyles.prevNext}>
+        <li>
+          {props.pageContext.prev && (
+            <Link to={`/blog/${props.pageContext.prev.fields.slug}`}>
+              <p>←Next Post</p>
+              <h3>{props.pageContext.prev.frontmatter.title}</h3>
+            </Link>
+          )}
+        </li>
+        <li>
           {props.pageContext.next && (
             <Link to={`/blog/${props.pageContext.next.fields.slug}`}>
-              <p>Next Post→</p>
+              <p>Previous Post→</p>
               <h3>{props.pageContext.next.frontmatter.title}</h3>
             </Link>
           )}
-        </div>
-      </div>
+        </li>
+      </ul>
     </Layout>
   )
 }

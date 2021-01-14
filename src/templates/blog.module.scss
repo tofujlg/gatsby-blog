@@ -68,12 +68,26 @@
   }
 }
 
-.articles {
+.prev-next {
   border-top: black solid 1px;
   padding: 3rem 0 0 0;
   margin: 5rem 2rem;
   display: flex;
   justify-content: space-between;
+  list-style-type: none;
+  li {
+    &:first-child {
+      text-align: left;
+      width: 48%;
+    }
+    &:last-child {
+      text-align: right;
+      width: 48%;
+    }
+    &:hover {
+      opacity: 0.7;
+    }
+  }
 }
 
 .next-article {

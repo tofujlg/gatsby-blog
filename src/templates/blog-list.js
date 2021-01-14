@@ -41,18 +41,22 @@ export default class BlogList extends React.Component {
             })}
           </ol>
         </div>
-        <div className={blogIndexStyles.pages}>
-          {!isFirst && (
-            <Link to={`/blog/${prevPage}`} rel="prev">
-              ← Prev
-            </Link>
-          )}
-          {!isLast && (
-            <Link to={`/blog/${nextPage}`} rel="next">
-              Next →
-            </Link>
-          )}
-        </div>
+        <ul className={blogIndexStyles.pagination}>
+          <li>
+            {!isFirst && (
+              <Link to={`/blog/${prevPage}`} rel="prev">
+                ← Prev
+              </Link>
+            )}
+          </li>
+          <li>
+            {!isLast && (
+              <Link to={`/blog/${nextPage}`} rel="next">
+                Next →
+              </Link>
+            )}
+          </li>
+        </ul>
       </Layout>
     )
   }

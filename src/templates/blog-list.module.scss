@@ -14,8 +14,8 @@
   }
 }
 
-// Pagination
-.pages {
+.pagination {
+  list-style-type: none;
   display: flex;
   justify-content: space-between;
   a {
