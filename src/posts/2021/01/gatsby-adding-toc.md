@@ -2,7 +2,7 @@
 title: "Gatsby.js ブログ記事に目次を追加する"
 date: "2021-01-13"
 tags: ["Gatsby"]
-hero: ../../images/Gatsby.jpeg
+emoji: "📑"
 ---
 
 ## 目標

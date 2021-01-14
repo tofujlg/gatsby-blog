@@ -1,6 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { Link, graphql } from "gatsby"
+import { Twemoji } from "react-emoji-render"
 import Layout from "../components/layout"
 import tagsStyles from "./tags.module.scss"
 
@@ -24,6 +25,7 @@ const Tags = ({ pageContext, data }) => {
               <li key={slug} className={tagsStyles.post}>
                 <Link to={blogSlug}>
                   <h2>{title}</h2>
+                  <Twemoji svg text={node.frontmatter.emoji || "📝"} />
                   <p>{node.frontmatter.date}</p>
                   <p>{node.frontmatter.tags}</p>
                 </Link>
@@ -85,6 +87,7 @@ export const pageQuery = graphql`
             title
             date
             tags
+            emoji
           }
         }
       }

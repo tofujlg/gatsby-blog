@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
-import Image from "gatsby-image"
+//import Image from "gatsby-image"
+import { Twemoji } from "react-emoji-render"
 import Layout from "../components/layout"
 import blogIndexStyles from "./blog-list.module.scss"
 
@@ -23,13 +24,13 @@ export default class BlogList extends React.Component {
               const title = node.frontmatter.title || node.fields.slug
               return (
                 <li className={blogIndexStyles.post}>
+                  <Twemoji
+                    className={blogIndexStyles.emojiWrapper}
+                    svg
+                    text={node.frontmatter.emoji || "📝"}
+                  />
                   <Link to={`/blog/${node.fields.slug}`}>
                     <h2>{title}</h2>
-                    {node.frontmatter.hero && (
-                      <Image
-                        fixed={node.frontmatter.hero.childImageSharp.fixed}
-                      />
-                    )}
                     <p>{node.frontmatter.date}</p>
                     <p>{node.frontmatter.tags}</p>
                   </Link>
@@ -71,13 +72,7 @@ export const blogListQuery = graphql`
             title
             date
             tags
-            hero {
-              childImageSharp {
-                fixed(width: 128, height: 128) {
-                  ...GatsbyImageSharpFixed
-                }
-              }
-            }
+            emoji
           }
         }
       }

@@ -13,9 +13,23 @@
   margin: 1rem 0 5rem 0;
 }
 
+.emoji-wrapper {
+  background: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center !important;
+  background: #dfdfdf;
+  width: 5rem;
+  height: 5rem;
+
+  img {
+    width: 2rem !important ;
+    height: 2rem !important;
+  }
+}
+
 .post {
   margin: 1rem 0;
-
   a {
     display: block;
     padding: 1rem;

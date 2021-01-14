@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
+import { Twemoji } from "react-emoji-render"
 import Layout from "../components/layout"
 import Head from "../components/head"
 import indexStyles from "./index.module.scss"
@@ -14,6 +15,7 @@ const IndexPage = () => {
               title
               date
               tags
+              emoji
             }
             fields {
               slug
@@ -34,6 +36,11 @@ const IndexPage = () => {
           {data.allMarkdownRemark.edges.map(edge => {
             return (
               <li className={indexStyles.post}>
+                <Twemoji
+                  className={indexStyles.emojiWrapper}
+                  svg
+                  text={edge.node.frontmatter.emoji || "📝"}
+                />
                 <Link to={`/blog/${edge.node.fields.slug}`}>
                   <h2>{edge.node.frontmatter.title}</h2>
                   <p>{edge.node.frontmatter.date}</p>

@@ -1,6 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import Image from "gatsby-image"
+//import Image from "gatsby-image"
+import { Twemoji } from "react-emoji-render"
 import _ from "lodash"
 import "prismjs/themes/prism-tomorrow.css"
 import Layout from "../components/layout"
@@ -15,13 +16,7 @@ export const query = graphql`
         title
         date
         tags
-        hero {
-          childImageSharp {
-            fluid(maxWidth: 1280) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
+        emoji
       }
       html
       fields {
@@ -39,13 +34,11 @@ const Blog = props => {
   return (
     <Layout>
       <div className={blogStyles.post}>
-        {props.data.markdownRemark.frontmatter.hero && (
-          <Image
-            fluid={
-              props.data.markdownRemark.frontmatter.hero.childImageSharp.fluid
-            }
-          />
-        )}
+        <Twemoji
+          className={blogStyles.emoji}
+          svg
+          text={props.data.markdownRemark.frontmatter.emoji || "📝"}
+        />
         <Head title={props.data.markdownRemark.frontmatter.title} />
         <h1 className={blogStyles.title}>
           {props.data.markdownRemark.frontmatter.title}

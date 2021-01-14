@@ -67,7 +67,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
   }
   // Create blog-list
   const posts = res.data.postsRemark.edges
-  const postsPerPage = 2
+  const postsPerPage = 4
   const numPages = Math.ceil(posts.length / postsPerPage)
   Array.from({ length: numPages }).forEach((_, i) => {
     createPage({

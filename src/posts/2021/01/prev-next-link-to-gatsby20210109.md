@@ -2,7 +2,7 @@
 title: "Gatsby製ブログ記事で前後の記事を表示させる"
 date: "2021-01-09"
 tags: ["Gatsby"]
-hero: ../../images/Gatsby.jpeg
+emoji: "➡️"
 ---
 
 Gatsby製のブログで記事の最後に前後記事へのリンクを追加したので、方法を紹介します。
