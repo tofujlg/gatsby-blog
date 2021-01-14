@@ -33,7 +33,7 @@ export const query = graphql`
 const Blog = props => {
   return (
     <Layout>
-      <div className={blogStyles.post}>
+      <div className={blogStyles.postWrapper}>
         <Twemoji
           className={blogStyles.emoji}
           svg
