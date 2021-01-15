@@ -42,7 +42,7 @@ const Header = () => {
               Tags
             </Link>
           </li>
-          <li>
+          <li className={headerStyles.toggle}>
             <DarkmodeToggle />
           </li>
         </ul>
