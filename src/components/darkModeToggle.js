@@ -1,6 +1,6 @@
 import React from "react"
 import { ThemeToggler } from "gatsby-plugin-dark-mode"
-import DarkmodeStyles from "./darkModeToggle.module.scss"
+import DarkmodeStyles from "../styles/components/darkModeToggle.module.scss"
 
 class DarkmodeToggle extends React.Component {
   render() {

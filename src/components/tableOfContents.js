@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "react-scroll"
-import tableOfContentsStyles from "./tableOfContents.module.scss"
+import tableOfContentsStyles from "../styles/components/tableOfContents.module.scss"
 
 const TableOfContents = props => {
   return (

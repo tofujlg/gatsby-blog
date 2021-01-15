@@ -1,6 +1,6 @@
 import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
-import headerStyles from "./header.module.scss"
+import headerStyles from "../styles/components/header.module.scss"
 import DarkmodeToggle from "./darkModeToggle"
 //import logo from "../imgages/logo.png"
 

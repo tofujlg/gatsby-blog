@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { Link, graphql } from "gatsby"
 import { Twemoji } from "react-emoji-render"
 import Layout from "../components/layout"
-import tagsStyles from "./tags.module.scss"
+import tagsStyles from "../styles/templates/tags.module.scss"
 
 const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext

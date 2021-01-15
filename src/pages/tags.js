@@ -4,7 +4,7 @@ import kebabCase from "lodash/kebabCase"
 import { Helmet } from "react-helmet"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
-import tagsStyles from "./tags.module.scss"
+import tagsStyles from "../styles/pages/tags.module.scss"
 
 const TagsPage = ({
   data: {

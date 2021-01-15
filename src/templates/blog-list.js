@@ -3,7 +3,7 @@ import { graphql, Link } from "gatsby"
 //import Image from "gatsby-image"
 import { Twemoji } from "react-emoji-render"
 import Layout from "../components/layout"
-import blogIndexStyles from "./blog-list.module.scss"
+import blogIndexStyles from "../styles/templates/blog-list.module.scss"
 
 export default class BlogList extends React.Component {
   render() {

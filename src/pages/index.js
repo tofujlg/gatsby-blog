@@ -3,7 +3,7 @@ import { Link, graphql, useStaticQuery } from "gatsby"
 import { Twemoji } from "react-emoji-render"
 import Layout from "../components/layout"
 import Head from "../components/head"
-import indexStyles from "./index.module.scss"
+import indexStyles from "../styles/index.module.scss"
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`

@@ -7,7 +7,7 @@ import "prismjs/themes/prism-tomorrow.css"
 import Layout from "../components/layout"
 import Head from "../components/head"
 import TableOfContents from "../components/tableOfContents"
-import blogStyles from "./blog.module.scss"
+import blogStyles from "../styles/templates/blog.module.scss"
 
 export const query = graphql`
   query($slug: String!) {
