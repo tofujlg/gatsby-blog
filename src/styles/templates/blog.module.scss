@@ -1,7 +1,7 @@
 @import "../postCard.scss";
 
 .post-wrapper {
-  margin: 4rem 0 2rem 0;
+  margin: 0 0 2rem 0;
 }
 
 .title {
@@ -26,7 +26,7 @@
 .tag {
   text-decoration: none;
   margin-right: 0.7rem;
-  padding: 0.2rem 0.5rem;
+  padding: 0.7rem 0.9rem;
   border: solid black 1px;
   border-radius: 5px;
   &:hover {
@@ -42,7 +42,7 @@
   h3,
   h4,
   h5 {
-    margin: 2rem 0;
+    margin: 4rem 0;
     border-left: solid 5px #d9bcd8; /*左線*/
     padding: 0.25em 0.5em;
   }
@@ -63,7 +63,7 @@
     margin: 0.5rem 0;
   }
   a {
-    color: cornflowerblue;
+    color: var(--link-text-color) !important;
     &:hover {
       text-decoration: underline;
     }
@@ -104,11 +104,11 @@
   align-items: center !important;
   background: var(--post-emoji-bg);
   width: max;
-  height: 15rem;
-  border-radius: 15px;
+  height: 20.5rem;
+  border-radius: 7px;
 
   img {
-    width: 8rem !important ;
-    height: 8rem !important;
+    width: 10rem !important ;
+    height: 10rem !important;
   }
 }

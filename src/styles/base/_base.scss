@@ -18,17 +18,24 @@ body {
   line-height: 1.6;
   background: #fff;
   transition: 0.8s;
+  font-size: $font-size-medium;
   --post-card-bg-hover: #e7e7e7;
   --post-emoji-bg: #e7e7e7;
+  --secondary-dark-color: #dfdfdf;
+  //text
+  --link-text-color: cornflowerblue;
 }
 // Dark theme settings
 
 body.dark {
   background: #15181e;
   color: #fff;
+  //color
   --post-card-bg-hover: rgb(49 55 70);
   --post-emoji-bg: rgb(49 55 70);
-
+  --secondary-dark-color: #313746;
+  //text
+  --link-text-color: cornflowerblue;
   a {
     color: $dark-p-text;
   }

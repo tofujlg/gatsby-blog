@@ -46,7 +46,6 @@ const Blog = props => {
         <p className={blogStyles.date}>
           {props.data.markdownRemark.frontmatter.date}
         </p>
-        <TableOfContents headings={props.data.markdownRemark.headings} />
         <div className={blogStyles.tagsWrapper}>
           {props.data.markdownRemark.frontmatter.tags.map(tag => {
             return (
@@ -59,6 +58,8 @@ const Blog = props => {
             )
           })}
         </div>
+        <TableOfContents headings={props.data.markdownRemark.headings} />
+
         <div
           dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }}
           className={blogStyles.blogPost}

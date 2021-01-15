@@ -48,12 +48,12 @@
     margin-bottom: 0;
     font-weight: 400;
     font-style: normal;
-    text-align: center;
+    //text-align: center;
   }
   p {
     font-size: 0.8rem;
     font-style: italic;
-    text-align: center;
+    //text-align: center;
     color: #555;
   }
   &:hover {
@@ -66,16 +66,20 @@
 }
 
 .more-articles {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
   color: #333;
   padding: 1rem 1.3rem;
-  border: black solid 1px;
   border-radius: 5px;
-  &:hover {
-    border: #a5a1a1 solid 1px;
-    color: #a5a1a1;
+  li {
+    &:hover {
+      color: #a5a1a1;
+      text-decoration: underline;
+    }
   }
 }
 
-.index-posts {
-  text-align: center;
-}
+// .index-posts {
+//  text-align: center;
+// }
