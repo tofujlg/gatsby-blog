@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+body {
+  font-family: sans-serif, "Noto Sans CJK JP", "Noto Sans JP", Arial, Helvetica;
+  color: #333;
+  line-height: 1.6;
+  background: #fff;
+  transition: 0.8s;
+  --post-card-bg-hover: #e7e7e7;
+  --post-emoji-bg: #e7e7e7;
+}
+// Dark theme settings
+
+body.dark {
+  background: #15181e;
+  color: #fff;
+  --post-card-bg-hover: rgb(49 55 70);
+  --post-emoji-bg: rgb(49 55 70);
+
+  a {
+    color: $dark-p-text;
+  }
+}
+//---- For Gatby-prism.js ---
+
+.gatsby-highlight {
+  background-color: #2d2d2d;
+  margin: 0.5rem 0;
+  padding: 1rem;
+  border-radius: 10px;
+}
+.gatsby-highlight-code-line {
+  background-color: #5454546e;
+  display: block;
+  margin-right: -1rem;
+  margin-left: -1rem;
+  padding-right: 1rem;
+  padding-left: 0.75rem;
+  border-left: 0.25rem solid #7a577a;
+}
+
+.gatsby-resp-image-wrapper {
+  box-shadow: black 1px 1px 5px;
+}
+
+//---- For gatsby-remark-code-titles plugin ---
+
+.gatsby-code-title {
+  background: #5555;
+  color: #ffffff;
+  margin-bottom: -1rem;
+  padding: 1rem;
+  font-size: 0.9rem;
+  line-height: 0.3;
+  font-weight: 800;
+  border-radius: 5px 5px 0 0;
+  display: table;
+}
+
+// --- Previous body data -----
+// body {
+//   //background: #dfdfdf;
+//   background: #e5e5e5;
+//   font-family: "Darker Grotesque", sans-serif, "Noto Sans CJK JP",
+//     "Noto Sans JP", Arial, Helvetica;
+// }

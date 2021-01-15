@@ -102,7 +102,7 @@
   display: flex;
   justify-content: center;
   align-items: center !important;
-  background: #dfdfdf;
+  background: var(--post-emoji-bg);
   width: max;
   height: 15rem;
   border-radius: 15px;

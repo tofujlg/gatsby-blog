@@ -1,31 +1,30 @@
 @import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300&display=swap");
-@import "../variables";
+@import "../base/settings";
 
+// Header wrapper
 .header {
-  padding: 0 3rem;
+  padding: 0.5rem $l-size;
   display: flex;
   justify-content: space-between;
-  border-bottom: rgba(0, 0, 0, 0.4) solid 1px;
+  //border-bottom: rgba(0, 0, 0, 0.4) solid 1px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
   a {
+    //color: #333;
     color: $title-color;
   }
-}
-
-.toggle {
-  margin: 0.5rem 0 0 1rem;
-}
-
-.title {
-  font-family: "Darker Grotesque", sans-serif, "Noto Sans CJK JP",
-    "Noto Sans JP", Arial, Helvetica;
-  font-size: 3.3rem;
-  text-decoration: none;
-  &:hover {
-    opacity: 0.8;
+  // Logo title
+  .title {
+    font-family: "Darker Grotesque", sans-serif, "Noto Sans CJK JP",
+      "Noto Sans JP", Arial, Helvetica;
+    font-size: $xl-size;
+    text-decoration: none;
+    &:hover {
+      opacity: 0.8;
+    }
   }
 }
 
+// Nav-wrapper
 .nav-list {
   display: flex;
   padding: 1.5rem 0;
@@ -47,4 +46,10 @@
   padding: 0 0 0.33rem 0;
   color: red;
   border-bottom: black solid 1px;
+}
+
+//Dark theme toggle switch
+
+.toggle {
+  margin: 0.5rem 0 0 1rem;
 }
