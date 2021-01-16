@@ -1,8 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
 import { Twemoji } from "react-emoji-render"
-import { RiGithubLine } from "@react-icons/all-files/Ri/RiGithubLine"
-import { RiTwitterLine } from "@react-icons/all-files/Ri/RiTwitterLine"
+import { RiGithubLine } from "@react-icons/all-files/ri/RiGithubLine"
+import { RiTwitterLine } from "@react-icons/all-files/ri/RiTwitterLine"
 import bioStyles from "../styles/components/Bio.module.scss"
 
 const Bio = () => {

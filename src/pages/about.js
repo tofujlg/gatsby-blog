@@ -1,6 +1,6 @@
 import React from "react"
-import { RiGithubLine } from "@react-icons/all-files/Ri/RiGithubLine"
-import { RiTwitterLine } from "@react-icons/all-files/Ri/RiTwitterLine"
+import { RiGithubLine } from "@react-icons/all-files/ri/RiGithubLine"
+import { RiTwitterLine } from "@react-icons/all-files/ri/RiTwitterLine"
 import Layout from "../components/layout"
 import Head from "../components/head"
 import aboutStyles from '../styles/pages/about.module.scss'
