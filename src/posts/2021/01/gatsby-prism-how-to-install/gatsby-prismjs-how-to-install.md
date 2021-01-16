@@ -3,6 +3,7 @@ title: "Gatsby.js Prismjsプラグインでシンタックスハイライトを�
 date: "2021-01-11"
 tags: ["Gatsby"]
 emoji: "🎨"
+hero: gatsby.svg
 ---
 
 ## 目標

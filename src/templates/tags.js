@@ -24,11 +24,20 @@ const Tags = ({ pageContext, data }) => {
             return (
               <li key={slug} className={tagsStyles.postCard}>
                 <Link to={blogSlug}>
-                  <Twemoji
-                    className={tagsStyles.postCardEmoji}
-                    svg
-                    text={node.frontmatter.emoji || "📝"}
-                  />
+                  {node.frontmatter.hero ? (
+                    <div className={tagsStyles.postIcon}>
+                      <img
+                        src={node.frontmatter.hero.publicURL}
+                        alt="SVGicon"
+                      />
+                    </div>
+                  ) : (
+                    <Twemoji
+                      className={tagsStyles.postCardEmoji}
+                      svg
+                      text={node.frontmatter.emoji || "📝"}
+                    />
+                  )}
                   <div className={tagsStyles.postCardContent}>
                     <h2>{title}</h2>
                     <h4>{node.frontmatter.date}</h4>
@@ -94,6 +103,9 @@ export const pageQuery = graphql`
             date
             tags
             emoji
+            hero {
+              publicURL
+            }
           }
         }
       }

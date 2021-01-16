@@ -18,6 +18,9 @@ export const query = graphql`
         date
         tags
         emoji
+        hero {
+          publicURL
+        }
       }
       html
       fields {
@@ -35,11 +38,20 @@ const Blog = props => {
   return (
     <Layout>
       <div className={blogStyles.postWrapper}>
-        <Twemoji
-          className={blogStyles.emoji}
-          svg
-          text={props.data.markdownRemark.frontmatter.emoji || "📝"}
-        />
+        {props.data.markdownRemark.frontmatter.hero ? (
+          <div className={blogStyles.postIcon}>
+            <img
+              src={props.data.markdownRemark.frontmatter.hero.publicURL}
+              alt="SVGicon"
+            />
+          </div>
+        ) : (
+          <Twemoji
+            className={blogStyles.emoji}
+            svg
+            text={props.data.markdownRemark.frontmatter.emoji || "📝"}
+          />
+        )}
         <Head title={props.data.markdownRemark.frontmatter.title} />
         <h1 className={blogStyles.title}>
           {props.data.markdownRemark.frontmatter.title}

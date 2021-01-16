@@ -25,11 +25,20 @@ export default class BlogList extends React.Component {
               return (
                 <li className={blogIndexStyles.postCard}>
                   <Link to={`/blog/${node.fields.slug}`}>
-                    <Twemoji
-                      className={blogIndexStyles.postCardEmoji}
-                      svg
-                      text={node.frontmatter.emoji || "📝"}
-                    />
+                    {node.frontmatter.hero ? (
+                      <div className={blogIndexStyles.postIcon}>
+                        <img
+                          src={node.frontmatter.hero.publicURL}
+                          alt="SVGicon"
+                        />
+                      </div>
+                    ) : (
+                      <Twemoji
+                        className={blogIndexStyles.postCardEmoji}
+                        svg
+                        text={node.frontmatter.emoji || "📝"}
+                      />
+                    )}
                     <div className={blogIndexStyles.postCardContent}>
                       <h2>{title}</h2>
                       <h4>{node.frontmatter.date}</h4>
@@ -80,6 +89,9 @@ export const blogListQuery = graphql`
             date
             tags
             emoji
+            hero {
+              publicURL
+            }
           }
         }
       }

@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import Head from "../components/head"
 import indexStyles from "../styles/pages/index.module.scss"
 import Bio from "../components/Bio"
+//
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -20,6 +21,9 @@ const IndexPage = () => {
               date
               tags
               emoji
+              hero {
+                publicURL
+              }
             }
             fields {
               slug
@@ -41,11 +45,20 @@ const IndexPage = () => {
             return (
               <li className={indexStyles.postCard}>
                 <Link to={`/blog/${edge.node.fields.slug}`}>
-                  <Twemoji
-                    className={indexStyles.postCardEmoji}
-                    svg
-                    text={edge.node.frontmatter.emoji || "📝"}
-                  />
+                  {edge.node.frontmatter.hero ? (
+                    <div className={indexStyles.postIcon}>
+                      <img
+                        src={edge.node.frontmatter.hero.publicURL}
+                        alt="SVGicon"
+                      />
+                    </div>
+                  ) : (
+                    <Twemoji
+                      className={indexStyles.postCardEmoji}
+                      svg
+                      text={edge.node.frontmatter.emoji || "📝"}
+                    />
+                  )}
                   <div className={indexStyles.postCardContent}>
                     <h2>{edge.node.frontmatter.title}</h2>
                     <h4>{edge.node.frontmatter.date}</h4>

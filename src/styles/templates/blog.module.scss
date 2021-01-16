@@ -130,3 +130,18 @@
     }
   }
 }
+
+.post-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center !important;
+  background: var(--post-emoji-bg);
+  width: max;
+  height: 20.5rem;
+  border-radius: 7px;
+
+  img {
+    width: 10rem !important ;
+    height: 10rem !important;
+  }
+}
