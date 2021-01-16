@@ -31,7 +31,7 @@ const Tags = ({ pageContext, data }) => {
                   />
                   <div className={tagsStyles.postCardContent}>
                     <h2>{title}</h2>
-                    <p>{node.frontmatter.date}</p>
+                    <h4>{node.frontmatter.date}</h4>
                     <p>{node.frontmatter.tags}</p>
                   </div>
                 </Link>

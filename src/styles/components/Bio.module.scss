@@ -1,8 +1,6 @@
 .bio-wrapper {
-  top: 5rem;
-  position: sticky;
   //margin: 5rem 0 0 0;
-  width: 290px;
+  margin: 2rem;
   padding: 1.5rem;
   font-size: 15.5px;
   background-color: var(--secondary-dark-color);
@@ -10,10 +8,40 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
   @media screen and (max-width: 950px) {
     position: relative;
-    margin: 2em 0;
-    width: 100%;
+    margin: 2em 2rem;
+    width: 84%;
   }
   @media screen and (max-width: 500px) {
     padding: 1.3em 1em;
+  }
+}
+
+.header {
+  display: flex;
+  margin: 1rem 0;
+  h3 {
+    font-size: 3rem;
+  }
+  .emoji {
+    margin-right: 2rem;
+    img {
+      width: 5rem !important;
+      height: 5rem !important;
+    }
+  }
+}
+.main {
+  a {
+    text-decoration: underline;
+  }
+}
+
+.sns-wrapper {
+  margin-top: 1.5rem;
+  a {
+    margin-right: 1rem;
+    &:hover {
+      opacity: 0.7;
+    }
   }
 }

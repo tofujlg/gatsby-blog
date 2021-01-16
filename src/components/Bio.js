@@ -1,23 +1,36 @@
 import React from "react"
 import { Link } from "gatsby"
 import { Twemoji } from "react-emoji-render"
+import { RiGithubLine } from "@react-icons/all-files/Ri/RiGithubLine"
+import { RiTwitterLine } from "@react-icons/all-files/Ri/RiTwitterLine"
 import bioStyles from "../styles/components/Bio.module.scss"
 
 const Bio = () => {
   return (
     <div className={bioStyles.bioWrapper}>
       <div className={bioStyles.header}>
-        <Twemoji svg text="👱‍♂️" />
-        <h3>コーヘイ</h3>
-        <p>フロントエンドエンジニア</p>
+        <Twemoji className={bioStyles.emoji} svg text="👱‍♂️" />
+        <h3>Kebab</h3>
+      </div>
+      <div className={bioStyles.main}>
+        <p>Frontend Engineer</p>
         <p>プログラミングと自然言語</p>
         <p>
           詳しくは<Link to="/about">こちら</Link>へ
         </p>
-        <p>Twitter</p>
-        <p>GitHub</p>
+        <div className={bioStyles.snsWrapper}>
+          <a
+            rel="noreferrer"
+            target="_blank"
+            href="https://twitter.com/KoheiProgrammi1"
+          >
+            <RiTwitterLine size="3rem" />
+          </a>
+          <a rel="noreferrer" target="_blank" href="https://github.com/tofujlg">
+            <RiGithubLine size="3rem" />
+          </a>
+        </div>
       </div>
-      <div className={bioStyles.main}></div>
     </div>
   )
 }

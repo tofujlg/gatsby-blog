@@ -15,16 +15,13 @@
 }
 
 .pagination {
+  font-size: 3rem;
   list-style-type: none;
   display: flex;
   justify-content: space-between;
   a {
     color: #333;
-    padding: 0.3rem 0.7rem;
-    border: black solid 1px;
-    border-radius: 5px;
     &:hover {
-      border: #a5a1a1 solid 1px;
       color: #a5a1a1;
     }
   }

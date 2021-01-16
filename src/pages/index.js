@@ -47,7 +47,7 @@ const IndexPage = () => {
                   />
                   <div className={indexStyles.postCardContent}>
                     <h2>{edge.node.frontmatter.title}</h2>
-                    <p>{edge.node.frontmatter.date}</p>
+                    <h4>{edge.node.frontmatter.date}</h4>
                     <p>{edge.node.frontmatter.tags}</p>
                   </div>
                 </Link>
@@ -60,7 +60,7 @@ const IndexPage = () => {
           <li></li>
           <li>
             <Link to="/blog/2">
-              <p>More Articles</p>
+              <p>→</p>
             </Link>
           </li>
         </ul>

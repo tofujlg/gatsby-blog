@@ -28,4 +28,14 @@
 .post-card-content {
   width: calc(100% - 90px);
   padding-left: 20px;
+  h4 {
+    color: grey;
+  }
+  p {
+    background: #888;
+    display: inline;
+    color: #333;
+    padding: 0.4rem 1rem;
+    border-radius: 3px;
+  }
 }
