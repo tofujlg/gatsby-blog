@@ -26,8 +26,8 @@ npm インストールして使うだけ。今回はTwitterとGithubのアイコ
 ## 使用
 
 ```js:title=about.js
-import { RiGithubLine } from "@react-icons/all-files/Ri/RiGithubLine"
-import { RiTwitterLine } from "@react-icons/all-files/Ri/RiTwitterLine"
+import { RiGithubLine } from "@react-icons/all-files/ri/RiGithubLine"
+import { RiTwitterLine } from "@react-icons/all-files/ri/RiTwitterLine"
 
 //...
 

@@ -1,7 +1,8 @@
 @import "../postCard.scss";
 
 .posts {
-  margin: 1rem 0 5rem 0;
+  max-width: 850px;
+  margin: 1rem auto 5rem auto;
   //text-align: center;
   ol {
     list-style-type: none;

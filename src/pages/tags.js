@@ -16,7 +16,7 @@ const TagsPage = ({
 }) => (
   <Layout>
     <Helmet title={title} />
-    <div>
+    <div className={tagsStyles.pageWrapper}>
       <div className={tagsStyles.heading}>
         <h3>Tags</h3>
       </div>

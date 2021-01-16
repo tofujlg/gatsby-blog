@@ -1,5 +1,11 @@
 @import "../postCard.scss";
 
+.index-wrapper {
+  margin: 3rem auto 0 auto;
+
+  max-width: 850px;
+}
+
 .heading {
   padding: 3.4rem 0;
   display: flex;

@@ -4,6 +4,7 @@ import { Twemoji } from "react-emoji-render"
 import Layout from "../components/layout"
 import Head from "../components/head"
 import indexStyles from "../styles/pages/index.module.scss"
+import Bio from "../components/Bio"
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -31,7 +32,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <Head title="Home" />
-      <div className={indexStyles.indexPosts}>
+      <div className={indexStyles.indexWrapper}>
         <div className={indexStyles.heading}>
           <h3>Blog Posts</h3>
         </div>
@@ -64,6 +65,7 @@ const IndexPage = () => {
             </Link>
           </li>
         </ul>
+        <Bio />
       </div>
     </Layout>
   )

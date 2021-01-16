@@ -5,7 +5,7 @@ import tableOfContentsStyles from "../styles/components/tableOfContents.module.s
 const TableOfContents = props => {
   return (
     <div className={tableOfContentsStyles.tableOfContents}>
-      <h2 className={tableOfContentsStyles.title}>Table of Contents</h2>
+      <h2 className={tableOfContentsStyles.title}>もくじ</h2>
       {props.headings.map(heading => (
         <Link
           smooth={true}

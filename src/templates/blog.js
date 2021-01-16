@@ -7,6 +7,7 @@ import "prismjs/themes/prism-tomorrow.css"
 import Layout from "../components/layout"
 import Head from "../components/head"
 import TableOfContents from "../components/tableOfContents"
+import Bio from "../components/Bio"
 import blogStyles from "../styles/templates/blog.module.scss"
 
 export const query = graphql`
@@ -58,14 +59,18 @@ const Blog = props => {
             )
           })}
         </div>
-        <TableOfContents headings={props.data.markdownRemark.headings} />
-
-        <div
-          dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }}
-          className={blogStyles.blogPost}
-        ></div>
-        {console.log(props.pageContext.prev)}
-        {console.log(props.pageContext.next)}
+        <div className={blogStyles.textWrapper}>
+          <div
+            dangerouslySetInnerHTML={{ __html: props.data.markdownRemark.html }}
+            className={blogStyles.blogPost}
+          ></div>
+          <div className={blogStyles.tocWrapper}>
+            <TableOfContents
+              className={blogStyles.toc}
+              headings={props.data.markdownRemark.headings}
+            />
+          </div>
+        </div>
       </div>
       <ul className={blogStyles.prevNext}>
         <li>
@@ -85,6 +90,7 @@ const Blog = props => {
           )}
         </li>
       </ul>
+      <Bio />
     </Layout>
   )
 }

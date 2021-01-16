@@ -36,6 +36,7 @@
 
 .blog-post {
   // Style each headings
+  width: calc(100% - 290px - 40px);
   line-height: 1.9;
   h1,
   h2,
@@ -110,5 +111,22 @@
   img {
     width: 10rem !important ;
     height: 10rem !important;
+  }
+}
+
+.text-wrapper {
+  display: flex;
+  position: relative;
+  .toc-wrapper {
+    width: 290px;
+    margin-left: 2rem;
+    position: sticky;
+    top: 4rem;
+  }
+  @media only screen and (max-width: 768px) {
+    display: block;
+    .toc-wrapper {
+      display: none !important;
+    }
   }
 }
