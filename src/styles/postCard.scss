@@ -5,7 +5,7 @@
     flex-direction: row;
     padding: 1.4em 0;
     &:hover {
-      background: var(--post-card-bg-hover);
+      background: var(--secondary-color);
     }
   }
 }
@@ -14,7 +14,7 @@
   display: flex;
   justify-content: center;
   align-items: center !important;
-  background: var(--post-emoji-bg);
+  background: var(--secondary-color);
   margin: 0;
   border-radius: 4px;
   width: 90px;
@@ -32,9 +32,9 @@
     color: grey;
   }
   p {
-    background: #888;
+    background: var(--tertiary-color);
     display: inline;
-    color: #333;
+    color: var(--text-color);
     padding: 0.4rem 1rem;
     border-radius: 3px;
   }

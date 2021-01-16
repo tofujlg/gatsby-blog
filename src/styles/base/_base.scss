@@ -13,32 +13,42 @@ a {
 }
 
 body {
-  font-family: sans-serif, "Noto Sans CJK JP", "Noto Sans JP", Arial, Helvetica;
-  color: #333;
   line-height: 1.6;
-  background: #fff;
   transition: 0.8s;
+  font-family: sans-serif, "Noto Sans CJK JP", "Noto Sans JP", Arial, Helvetica;
+  color: var(--text-color);
+  background: var(--bg-color);
   font-size: $font-size-medium;
-  --post-card-bg-hover: #e7e7e7;
-  --post-emoji-bg: #e7e7e7;
-  --secondary-dark-color: #dfdfdf;
+
+  // Variables
+  --text-color: #333;
+  --bg-color: #f0f5f9;
+  --secondary-color: #dfdfdf;
+  --tertiary-color: rgb(128, 157, 211);
   //text
   --link-text-color: cornflowerblue;
+
+  // --- Test -----
 }
+
 // Dark theme settings
 
 body.dark {
-  background: #15181e;
-  color: #fff;
-  //color
-  --post-card-bg-hover: rgb(49 55 70);
-  --post-emoji-bg: rgb(49 55 70);
-  --secondary-dark-color: #313746;
+  // variables
+  --text-color: #fff;
+  --bg-color: #15181e;
+  --secondary-color: #313746;
+  --tertiary-color: #c9d6de;
+
   //text
-  --link-text-color: cornflowerblue;
+  --link-text-color: rgb(3, 3, 3);
   a {
     color: $dark-p-text;
   }
+
+  //--- Test ----
+  --bg-color: #1e2022;
+  --secondary-color: #52616a;
 }
 //---- For Gatby-prism.js ---
 
@@ -78,7 +88,7 @@ body.dark {
 
 // --- Previous body data -----
 // body {
-//   //background: #dfdfdf;
+//   background: #dfdfdf;
 //   background: #e5e5e5;
 //   font-family: "Darker Grotesque", sans-serif, "Noto Sans CJK JP",
 //     "Noto Sans JP", Arial, Helvetica;

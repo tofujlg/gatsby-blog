@@ -3,6 +3,7 @@ title: "Udemyで再生時間70時間のJavaScriptのコースを終わらせた"
 date: "2020-12-01"
 tags: ["JavaScript"]
 emoji: "☕"
+hero: javascript.svg
 ---
 
 Udemy にある"The Complete JavaScript Course 2020: From Zero to Expert!"(https://www.udemy.com/course/the-complete-javascript-course/)というコースを昨日終わらせました。
