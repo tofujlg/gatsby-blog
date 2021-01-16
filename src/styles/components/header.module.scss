@@ -26,15 +26,19 @@
 // Nav-wrapper
 .nav-list {
   display: flex;
-  padding: 1.5rem 0;
+  padding: 2rem 0;
   list-style-type: none;
   font-weight: 100;
 }
 
 .nav-item {
-  font-size: 1.5rem;
+  font-size: 2.3rem;
   margin-right: 2rem;
   text-decoration: none;
+  display: flex;
+  svg {
+    margin: 0.5rem 0.2rem 0 0;
+  }
 }
 
 .nav-item:hover {

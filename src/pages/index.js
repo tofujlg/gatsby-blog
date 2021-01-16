@@ -1,6 +1,7 @@
 import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import { Twemoji } from "react-emoji-render"
+import { AiOutlineTag } from "@react-icons/all-files/ai/AiOutlineTag"
 import Layout from "../components/layout"
 import Head from "../components/head"
 import indexStyles from "../styles/pages/index.module.scss"
@@ -62,7 +63,10 @@ const IndexPage = () => {
                   <div className={indexStyles.postCardContent}>
                     <h2>{edge.node.frontmatter.title}</h2>
                     <h4>{edge.node.frontmatter.date}</h4>
-                    <p>{edge.node.frontmatter.tags}</p>
+                    <div className={indexStyles.postCard__tags}>
+                      <AiOutlineTag size="2.3rem" />
+                      <p>{edge.node.frontmatter.tags}</p>
+                    </div>
                   </div>
                 </Link>
               </li>

@@ -70,6 +70,12 @@
     }
   }
 }
+.post-card__tags {
+  display: flex;
+  svg {
+    margin: 0.5rem 0.5rem 0 0;
+  }
+}
 
 .more-articles {
   list-style-type: none;
