@@ -37,6 +37,9 @@
 .blog-post {
   // Style each headings
   width: calc(100% - 290px - 40px);
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+  }
   line-height: 1.9;
   h1,
   h2,
@@ -125,8 +128,12 @@
   }
   @media only screen and (max-width: 768px) {
     display: block;
+    .text-wrapper {
+      width: max-content !important;
+    }
     .toc-wrapper {
       display: none !important;
+      width: 0;
     }
   }
 }
