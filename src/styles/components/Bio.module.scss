@@ -6,14 +6,7 @@
   background-color: var(--secondary-color);
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
-  @media screen and (max-width: 950px) {
-    position: relative;
-    margin: 2em 2rem;
-    width: 84%;
-  }
-  @media screen and (max-width: 500px) {
-    padding: 1.3em 1em;
-  }
+  box-shadow: 0 0 2px grey;
 }
 
 .header {

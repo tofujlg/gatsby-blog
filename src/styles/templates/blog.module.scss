@@ -23,9 +23,10 @@
 
 .tag {
   text-decoration: none;
+  background: var(--tertiary-color);
   margin-right: 0.7rem;
   padding: 0.7rem 0.9rem;
-  border: solid black 1px;
+  border: solid rgba(128, 128, 128, 0.363) 1px;
   border-radius: 5px;
   &:hover {
     opacity: 0.8;
@@ -100,15 +101,48 @@
   }
 }
 
+@media only screen and (max-width: 450px) {
+  .prev-next {
+    display: block;
+    li {
+      &:first-child {
+        width: 100%;
+        margin-bottom: 2rem;
+      }
+      &:last-child {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// Emoji or SVG Thumbnails
+
 .emoji {
   display: flex;
   justify-content: center;
   align-items: center !important;
   background: var(--secondary-color);
   width: max;
-  height: 20.5rem;
+  height: 30rem;
   border-radius: 7px;
-  box-shadow: 1px 1px 3px black;
+  box-shadow: 0 0 3px grey;
+
+  img {
+    width: 10rem !important ;
+    height: 10rem !important;
+  }
+}
+
+.post-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center !important;
+  background: var(--secondary-color);
+  width: max;
+  height: 30rem;
+  border-radius: 7px;
+  box-shadow: 0 0 3px grey;
 
   img {
     width: 10rem !important ;
@@ -134,21 +168,5 @@
       display: none !important;
       width: 0;
     }
-  }
-}
-
-.post-icon {
-  display: flex;
-  justify-content: center;
-  align-items: center !important;
-  background: var(--secondary-color);
-  width: max;
-  height: 20.5rem;
-  border-radius: 7px;
-  box-shadow: 1px 1px 3px black;
-
-  img {
-    width: 10rem !important ;
-    height: 10rem !important;
   }
 }

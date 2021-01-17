@@ -24,7 +24,7 @@ hero: ./react.svg
 
 記事のMarkdownと同じディレクトリにSVGを配置して、MDのfrontmatterにheroを追加します。
 
-```markdonw:title=記事.md
+```markdown:title=記事.md
 ーーー
 title: "SVGのテスト"
 date: "2021-01-16"

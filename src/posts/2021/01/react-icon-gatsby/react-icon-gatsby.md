@@ -18,7 +18,7 @@ emoji: "🐤"
 Fontawsome, Remix iconsなどに対応している。
 
 ## インストール
-```bash:titile=console
+```bash:title=console
 npm install @react-icons/all-files
 ```
 npm インストールして使うだけ。今回はTwitterとGithubのアイコンを設置したい。
