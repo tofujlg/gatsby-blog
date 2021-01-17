@@ -1,6 +1,5 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
-//import Image from "gatsby-image"
 import { Twemoji } from "react-emoji-render"
 import Layout from "../components/layout"
 import blogIndexStyles from "../styles/templates/blog-list.module.scss"
@@ -39,7 +38,7 @@ export default class BlogList extends React.Component {
                         text={node.frontmatter.emoji || "📝"}
                       />
                     )}
-                    <div className={blogIndexStyles.postCardContent}>
+                    <div className={blogIndexStyles.postCard__info}>
                       <h2>{title}</h2>
                       <h4>{node.frontmatter.date}</h4>
                       <p>{node.frontmatter.tags}</p>

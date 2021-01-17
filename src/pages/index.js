@@ -6,7 +6,6 @@ import Layout from "../components/layout"
 import Head from "../components/head"
 import indexStyles from "../styles/pages/index.module.scss"
 import Bio from "../components/Bio"
-//
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -39,7 +38,7 @@ const IndexPage = () => {
       <Head title="Home" />
       <div className={indexStyles.indexWrapper}>
         <div className={indexStyles.heading}>
-          <h3>Blog Posts</h3>
+          <h3>Latest Posts</h3>
         </div>
         <ol className={indexStyles.posts}>
           {data.allMarkdownRemark.edges.map(edge => {
@@ -60,12 +59,14 @@ const IndexPage = () => {
                       text={edge.node.frontmatter.emoji || "📝"}
                     />
                   )}
-                  <div className={indexStyles.postCardContent}>
+                  <div className={indexStyles.postCard__info}>
                     <h2>{edge.node.frontmatter.title}</h2>
                     <h4>{edge.node.frontmatter.date}</h4>
                     <div className={indexStyles.postCard__tags}>
-                      <AiOutlineTag size="2.3rem" />
-                      <p>{edge.node.frontmatter.tags}</p>
+                      <p>
+                        <AiOutlineTag size="2rem" />
+                        {edge.node.frontmatter.tags}
+                      </p>
                     </div>
                   </div>
                 </Link>

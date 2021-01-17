@@ -38,7 +38,7 @@ const Tags = ({ pageContext, data }) => {
                       text={node.frontmatter.emoji || "📝"}
                     />
                   )}
-                  <div className={tagsStyles.postCardContent}>
+                  <div className={tagsStyles.postCard__info}>
                     <h2>{title}</h2>
                     <h4>{node.frontmatter.date}</h4>
                     <p>{node.frontmatter.tags}</p>

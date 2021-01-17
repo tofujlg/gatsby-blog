@@ -24,11 +24,14 @@ body {
   --text-color: #333;
   --bg-color: #f0f5f9;
   --secondary-color: #dfdfdf;
-  --tertiary-color: rgb(128, 157, 211);
+  --tertiary-color: #a1e2d3;
   //text
   --link-text-color: cornflowerblue;
 
   // --- Test -----
+  --bg-color: #e7e7eb;
+  --secondary-color: #ebe8e6;
+  --tertiary-color: #e8ebe6;
 }
 
 // Dark theme settings
@@ -41,7 +44,7 @@ body.dark {
   --tertiary-color: #c9d6de;
 
   //text
-  --link-text-color: rgb(3, 3, 3);
+  --link-text-color: cornflowerblue;
   a {
     color: $dark-p-text;
   }

@@ -61,19 +61,3 @@
     color: #a5a1a1;
   }
 }
-
-.post-icon {
-  background: #333;
-  display: flex;
-  justify-content: center;
-  align-items: center !important;
-  background: var(--secondary-color);
-  margin: 0;
-  border-radius: 4px;
-  width: 90px;
-  height: 90px;
-  img {
-    width: 5rem !important ;
-    height: 5rem !important;
-  }
-}

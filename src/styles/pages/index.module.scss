@@ -12,7 +12,7 @@
   justify-content: center;
   h3 {
     font-weight: 100;
-    font-size: 1.7rem;
+    font-size: 3rem;
   }
 }
 
@@ -50,12 +50,6 @@
   //   color: #dfdfdf;
   // }
 
-  h2 {
-    margin-bottom: 0;
-    font-weight: 400;
-    font-style: normal;
-    //text-align: center;
-  }
   p {
     font-size: 0.8rem;
     font-style: italic;
@@ -68,12 +62,6 @@
     p {
       color: #a5a1a1;
     }
-  }
-}
-.post-card__tags {
-  display: flex;
-  svg {
-    margin: 0.5rem 0.5rem 0 0;
   }
 }
 
@@ -90,21 +78,5 @@
       color: #a5a1a1;
       text-decoration: underline;
     }
-  }
-}
-
-.post-icon {
-  background: #333;
-  display: flex;
-  justify-content: center;
-  align-items: center !important;
-  background: var(--secondary-color);
-  margin: 0;
-  border-radius: 4px;
-  width: 90px;
-  height: 90px;
-  img {
-    width: 5rem !important ;
-    height: 5rem !important;
   }
 }
