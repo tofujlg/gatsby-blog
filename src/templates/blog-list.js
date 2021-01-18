@@ -16,9 +16,9 @@ export default class BlogList extends React.Component {
 
     return (
       <Layout>
-        <div className={blogIndexStyles.postsList}>
+        <div className={blogIndexStyles.postsWrapper}>
           <h3>Blog Posts</h3>
-          <ol>
+          <ol className={blogIndexStyles.posts}>
             {posts.map(({ node }) => {
               const title = node.frontmatter.title || node.fields.slug
               return (

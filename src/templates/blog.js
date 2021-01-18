@@ -83,26 +83,26 @@ const Blog = props => {
             />
           </div>
         </div>
+        <ul className={blogStyles.prevNext}>
+          <li>
+            {props.pageContext.prev && (
+              <Link to={`/blog/${props.pageContext.prev.fields.slug}`}>
+                <p>←Next Post</p>
+                <h3>{props.pageContext.prev.frontmatter.title}</h3>
+              </Link>
+            )}
+          </li>
+          <li>
+            {props.pageContext.next && (
+              <Link to={`/blog/${props.pageContext.next.fields.slug}`}>
+                <p>Previous Post→</p>
+                <h3>{props.pageContext.next.frontmatter.title}</h3>
+              </Link>
+            )}
+          </li>
+        </ul>
+        <Bio />
       </div>
-      <ul className={blogStyles.prevNext}>
-        <li>
-          {props.pageContext.prev && (
-            <Link to={`/blog/${props.pageContext.prev.fields.slug}`}>
-              <p>←Next Post</p>
-              <h3>{props.pageContext.prev.frontmatter.title}</h3>
-            </Link>
-          )}
-        </li>
-        <li>
-          {props.pageContext.next && (
-            <Link to={`/blog/${props.pageContext.next.fields.slug}`}>
-              <p>Previous Post→</p>
-              <h3>{props.pageContext.next.frontmatter.title}</h3>
-            </Link>
-          )}
-        </li>
-      </ul>
-      <Bio />
     </Layout>
   )
 }

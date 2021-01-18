@@ -14,9 +14,9 @@ const Tags = ({ pageContext, data }) => {
 
   return (
     <Layout>
-      <div className={tagsStyles.posts}>
+      <div className={tagsStyles.postsWrapper}>
         <h3>{tagHeader}</h3>
-        <ol>
+        <ol className={tagsStyles.posts}>
           {edges.map(({ node }) => {
             const { slug } = node.fields
             const { title } = node.frontmatter

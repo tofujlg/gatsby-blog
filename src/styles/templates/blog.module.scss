@@ -47,6 +47,9 @@
   @media only screen and (max-width: 768px) {
     width: 100%;
     padding: 0;
+    margin: 0 0.3rem;
+    background: var(--bg-color);
+    box-shadow: none;
   }
 
   line-height: 1.9;
@@ -84,7 +87,7 @@
 }
 
 .prev-next {
-  border-top: black solid 1px;
+  border-top: rgba(63, 61, 61, 0.329) solid 1px;
   padding: 3rem 0 0 0;
   margin: 5rem 2rem;
   display: flex;
