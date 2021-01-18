@@ -43,7 +43,7 @@ const IndexPage = () => {
         <ol className={indexStyles.posts}>
           {data.allMarkdownRemark.edges.map(edge => {
             return (
-              <li className={indexStyles.postCard}>
+              <li key={edge.node.fields.slug} className={indexStyles.postCard}>
                 <Link to={`/blog/${edge.node.fields.slug}`}>
                   {edge.node.frontmatter.hero ? (
                     <div className={indexStyles.postIcon}>

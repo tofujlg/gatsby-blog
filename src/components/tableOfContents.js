@@ -8,6 +8,7 @@ const TableOfContents = props => {
       <h2 className={tableOfContentsStyles.title}>もくじ</h2>
       {props.headings.map(heading => (
         <Link
+          key={heading.id}
           smooth={true}
           to={heading.id}
           duration={1000}

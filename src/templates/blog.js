@@ -62,6 +62,7 @@ const Blog = props => {
           {props.data.markdownRemark.frontmatter.tags.map(tag => {
             return (
               <Link
+                key={tag}
                 className={blogStyles.tag}
                 to={`/tags/${_.kebabCase(tag)}/`}
               >
