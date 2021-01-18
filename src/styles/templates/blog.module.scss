@@ -39,7 +39,7 @@
 .blog-post {
   // Style each headings
   background: var(--secondary-color);
-  border-radius: 5px;
+  border-radius: 4px;
   box-shadow: 0 0 1px rgba(128, 128, 128, 0.185);
 
   width: calc(100% - 290px);
@@ -47,7 +47,6 @@
   @media only screen and (max-width: 768px) {
     width: 100%;
     padding: 0;
-    margin: 0 0.3rem;
     background: var(--bg-color);
     box-shadow: none;
   }

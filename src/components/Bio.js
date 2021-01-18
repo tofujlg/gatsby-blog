@@ -9,12 +9,11 @@ const Bio = () => {
   return (
     <div className={bioStyles.bioWrapper}>
       <div className={bioStyles.header}>
-        <Twemoji className={bioStyles.emoji} svg text="👱‍♂️" />
+        <Twemoji className={bioStyles.emoji} svg text="🥙" />
         <h3>Kebab</h3>
       </div>
       <div className={bioStyles.main}>
-        <p>Frontend Engineer</p>
-        <p>プログラミングと自然言語</p>
+        <p>FrontendよりのEngineer</p>
         <p>
           詳しくは<Link to="/about">こちら</Link>へ
         </p>
