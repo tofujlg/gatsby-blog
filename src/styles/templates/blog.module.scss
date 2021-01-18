@@ -38,6 +38,10 @@
 
 .blog-post {
   // Style each headings
+  background: var(--secondary-color);
+  border-radius: 5px;
+  box-shadow: 0 0 1px rgba(128, 128, 128, 0.185);
+
   width: calc(100% - 290px);
   padding: 0 2rem;
   @media only screen and (max-width: 768px) {
@@ -132,7 +136,7 @@
   width: max;
   height: 30rem;
   border-radius: 7px;
-  box-shadow: 0 0 3px grey;
+  box-shadow: 0 0 1px rgba(128, 128, 128, 0.185);
 
   img {
     width: 10rem !important ;
@@ -148,7 +152,7 @@
   width: max;
   height: 30rem;
   border-radius: 7px;
-  box-shadow: 0 0 3px grey;
+  box-shadow: 0 0 1px rgba(128, 128, 128, 0.185);
 
   img {
     width: 10rem !important ;
