@@ -59,7 +59,6 @@
 }
 .emoji {
   margin: 0 10rem;
-
   display: flex;
   justify-content: center;
   align-items: center !important;
@@ -72,6 +71,9 @@
   img {
     width: 10rem !important ;
     height: 10rem !important;
+  }
+  @media only screen and (max-width: 768px) {
+    margin: 1rem;
   }
 }
 
@@ -89,6 +91,9 @@
   img {
     width: 10rem !important ;
     height: 10rem !important;
+  }
+  @media only screen and (max-width: 768px) {
+    margin: 1rem;
   }
 }
 
