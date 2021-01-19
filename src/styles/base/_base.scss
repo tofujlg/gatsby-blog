@@ -22,16 +22,16 @@ body {
 
   // Variables
   --text-color: #333;
-  --bg-color: #f0f5f9;
-  --secondary-color: #dfdfdf;
-  --tertiary-color: #a1e2d3;
+  --bg-color: #e7e7eb;
+  --secondary-color: #ebe8e6;
+  --tertiary-color: #e8ebe6;
   //text
   --link-text-color: cornflowerblue;
 
   // --- Test -----
   --bg-color: #e7e7eb;
-  --secondary-color: #ebe8e6;
-  --tertiary-color: #e8ebe6;
+  --secondary-color: #ebe7e7;
+  --tertiary-color: #e5e1e6;
 }
 
 // Dark theme settings
@@ -39,9 +39,9 @@ body {
 body.dark {
   // variables
   --text-color: #fff;
-  --bg-color: #15181e;
-  --secondary-color: #313746;
-  --tertiary-color: #c9d6de;
+  --bg-color: #20232a;
+  --secondary-color: #282c34;
+  --tertiary-color: #414755;
 
   //text
   --link-text-color: cornflowerblue;
@@ -50,8 +50,6 @@ body.dark {
   }
 
   //--- Test ----
-  --bg-color: #20232a;
-  --secondary-color: #282c34;
 }
 //---- For Gatby-prism.js ---
 
