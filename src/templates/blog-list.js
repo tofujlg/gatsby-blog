@@ -1,6 +1,8 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 import { Twemoji } from "react-emoji-render"
+import { IoMdArrowRoundBack } from "@react-icons/all-files/io/IoMdArrowRoundBack"
+import { IoMdArrowRoundForward } from "@react-icons/all-files/io/IoMdArrowRoundForward"
 import Layout from "../components/layout"
 import blogIndexStyles from "../styles/templates/blog-list.module.scss"
 
@@ -53,14 +55,14 @@ export default class BlogList extends React.Component {
             <li>
               {!isFirst && (
                 <Link to={`/blog/${prevPage}`} rel="prev">
-                  ←
+                  <IoMdArrowRoundBack size="4rem" />
                 </Link>
               )}
             </li>
             <li>
               {!isLast && (
                 <Link to={`/blog/${nextPage}`} rel="next">
-                  →
+                  <IoMdArrowRoundForward size="4rem" />
                 </Link>
               )}
             </li>

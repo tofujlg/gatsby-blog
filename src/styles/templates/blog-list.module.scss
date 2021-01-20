@@ -31,6 +31,7 @@
 
 .pagination {
   font-size: 3rem;
+  margin: 5rem 30rem;
   list-style-type: none;
   display: flex;
   justify-content: space-between;
@@ -39,5 +40,8 @@
     &:hover {
       color: #a5a1a1;
     }
+  }
+  @media only screen and (max-width: 450px) {
+    margin: 5rem 7rem;
   }
 }
