@@ -62,15 +62,23 @@
   }
 }
 
+.to-center {
+  margin: 10rem 0 10rem 28rem;
+  @media only screen and (max-width: 450px) {
+    margin: 0 0 0 5rem;
+  }
+}
+
 .alltags {
   font-size: 1.6rem;
   margin: 5rem;
   color: #333;
-  padding: 0.5rem 1rem;
-  border: black solid 1px;
+  padding: 1.5rem 2.6rem;
   border-radius: 5px;
+  align-self: center;
+  background-color: var(--secondary-color);
+  box-shadow: 0 0 1px rgba(128, 128, 128, 0.185);
   &:hover {
-    border: #a5a1a1 solid 1px;
-    color: #a5a1a1;
+    opacity: 0.6;
   }
 }

@@ -38,7 +38,9 @@ const Blog = props => {
     <Layout>
       <div className={blogStyles.postWrapper}>
         {props.data.markdownRemark.frontmatter.hero ? (
-          <div className={blogStyles.postIcon}>
+          <div
+            className={`${blogStyles.postIcon} ${blogStyles.largeContainer}`}
+          >
             <img
               src={props.data.markdownRemark.frontmatter.hero.publicURL}
               alt="SVGicon"
@@ -46,7 +48,7 @@ const Blog = props => {
           </div>
         ) : (
           <Twemoji
-            className={blogStyles.emoji}
+            className={`${blogStyles.emoji} ${blogStyles.largeContainer}`}
             svg
             text={props.data.markdownRemark.frontmatter.emoji || "📝"}
           />
@@ -83,25 +85,27 @@ const Blog = props => {
             />
           </div>
         </div>
-        <ul className={blogStyles.prevNext}>
-          <li>
-            {props.pageContext.prev && (
-              <Link to={`/blog/${props.pageContext.prev.fields.slug}`}>
-                <p>←Next Post</p>
-                <h3>{props.pageContext.prev.frontmatter.title}</h3>
-              </Link>
-            )}
-          </li>
-          <li>
-            {props.pageContext.next && (
-              <Link to={`/blog/${props.pageContext.next.fields.slug}`}>
-                <p>Previous Post→</p>
-                <h3>{props.pageContext.next.frontmatter.title}</h3>
-              </Link>
-            )}
-          </li>
-        </ul>
-        <Bio />
+        <div className={blogStyles.largeContainer}>
+          <ul className={blogStyles.prevNext}>
+            <li>
+              {props.pageContext.prev && (
+                <Link to={`/blog/${props.pageContext.prev.fields.slug}`}>
+                  <p>←Next Post</p>
+                  <h3>{props.pageContext.prev.frontmatter.title}</h3>
+                </Link>
+              )}
+            </li>
+            <li>
+              {props.pageContext.next && (
+                <Link to={`/blog/${props.pageContext.next.fields.slug}`}>
+                  <p>Previous Post→</p>
+                  <h3>{props.pageContext.next.frontmatter.title}</h3>
+                </Link>
+              )}
+            </li>
+          </ul>
+          <Bio />
+        </div>
       </div>
     </Layout>
   )

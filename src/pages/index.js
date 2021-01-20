@@ -74,15 +74,11 @@ const IndexPage = () => {
             )
           })}
         </ol>
-        <ul className={indexStyles.moreArticles}>
-          {" "}
-          <li></li>
-          <li>
-            <Link to="/blog/2">
-              <p>→</p>
-            </Link>
-          </li>
-        </ul>
+        <div className={indexStyles.moreArticles}>
+          <Link to="/blog/2">
+            <p>More Posts</p>
+          </Link>
+        </div>
         <Bio />
       </div>
     </Layout>

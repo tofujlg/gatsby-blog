@@ -22,7 +22,7 @@ export default class BlogList extends React.Component {
             {posts.map(({ node }) => {
               const title = node.frontmatter.title || node.fields.slug
               return (
-                <li className={blogIndexStyles.postCard}>
+                <li key={node.fields.slug} className={blogIndexStyles.postCard}>
                   <Link to={`/blog/${node.fields.slug}`}>
                     {node.frontmatter.hero ? (
                       <div className={blogIndexStyles.postIcon}>

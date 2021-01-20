@@ -52,9 +52,11 @@ const Tags = ({ pageContext, data }) => {
               This links to a page that does not yet exist.
               You'll come back to it!
             */}
-        <Link to="/tags" className={tagsStyles.alltags}>
-          Check All tags
-        </Link>
+        <div className={tagsStyles.toCenter}>
+          <Link to="/tags" className={tagsStyles.alltags}>
+            Check All tags
+          </Link>
+        </div>
       </div>
     </Layout>
   )

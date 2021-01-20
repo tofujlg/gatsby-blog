@@ -76,17 +76,20 @@
 }
 
 .more-articles {
-  list-style-type: none;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  margin: 9rem auto;
   color: #333;
-  padding: 1rem 1.3rem;
-  border-radius: 5px;
-  font-size: 3rem;
-  li {
+
+  a {
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+    padding: 1.3rem 2.6rem;
+
+    box-shadow: 0 0 1px rgba(128, 128, 128, 0.185);
     &:hover {
-      color: #a5a1a1;
-      text-decoration: underline;
+      opacity: 0.7;
     }
   }
 }
