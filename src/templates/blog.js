@@ -1,6 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import { Twemoji } from "react-emoji-render"
+import { AiOutlineTag } from "@react-icons/all-files/ai/AiOutlineTag"
 import _ from "lodash"
 import "prismjs/themes/prism-tomorrow.css"
 import Layout from "../components/layout"
@@ -68,6 +69,8 @@ const Blog = props => {
                 className={blogStyles.tag}
                 to={`/tags/${_.kebabCase(tag)}/`}
               >
+                {" "}
+                <AiOutlineTag size="2rem" />
                 {tag}
               </Link>
             )

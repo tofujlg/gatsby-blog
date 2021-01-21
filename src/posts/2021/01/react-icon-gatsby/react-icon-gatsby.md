@@ -2,7 +2,7 @@
 title: "React-iconsで簡単にサイトにアイコンを追加する"
 date: "2021-01-16"
 tags: ["React"]
-emoji: "🐤"
+hero: ./react.svg
 ---
 
 ## 目標

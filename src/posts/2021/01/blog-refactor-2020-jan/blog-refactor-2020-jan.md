@@ -2,7 +2,6 @@
 title: "Gatsbyブログ改修記 2021.01"
 date: "2021-01-19"
 tags: ["Gatsby"]
-emoji: "🎨"
 hero: gatsby.svg
 ---
 

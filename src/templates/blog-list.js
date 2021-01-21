@@ -3,6 +3,7 @@ import { graphql, Link } from "gatsby"
 import { Twemoji } from "react-emoji-render"
 import { IoMdArrowRoundBack } from "@react-icons/all-files/io/IoMdArrowRoundBack"
 import { IoMdArrowRoundForward } from "@react-icons/all-files/io/IoMdArrowRoundForward"
+import { AiOutlineTag } from "@react-icons/all-files/ai/AiOutlineTag"
 import Layout from "../components/layout"
 import blogIndexStyles from "../styles/templates/blog-list.module.scss"
 
@@ -43,7 +44,12 @@ export default class BlogList extends React.Component {
                     <div className={blogIndexStyles.postCard__info}>
                       <h2>{title}</h2>
                       <h4>{node.frontmatter.date}</h4>
-                      <p>{node.frontmatter.tags}</p>
+                      <div className={blogIndexStyles.postCard__tags}>
+                        <p>
+                          <AiOutlineTag size="2rem" />
+                          {node.frontmatter.tags}
+                        </p>
+                      </div>
                     </div>
                   </Link>
                 </li>
