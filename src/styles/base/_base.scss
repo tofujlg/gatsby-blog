@@ -55,7 +55,7 @@ body.dark {
 
 .gatsby-highlight {
   background-color: #2d2d2d;
-  margin: 0.5rem 0;
+  margin: 0.5rem 0 4rem 0;
   padding: 1rem;
   border-radius: 10px;
 }
@@ -71,6 +71,7 @@ body.dark {
 
 .gatsby-resp-image-wrapper {
   box-shadow: 0 0 3px grey;
+  margin: 5rem 0;
 }
 
 //---- For gatsby-remark-code-titles plugin ---
@@ -78,9 +79,10 @@ body.dark {
 .gatsby-code-title {
   background: #5555;
   color: #ffffff;
+  margin-top: 5rem;
   margin-bottom: -1rem;
   padding: 1rem;
-  font-size: 0.9rem;
+  font-size: 1.3rem;
   line-height: 0.3;
   font-weight: 800;
   border-radius: 5px 5px 0 0;
