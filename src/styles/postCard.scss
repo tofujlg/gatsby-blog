@@ -10,33 +10,16 @@
     }
   }
 }
-.post-card-emoji {
-  background: #333;
-  display: flex;
-  justify-content: center;
-  align-items: center !important;
-  background: var(--tertiary-color);
-  margin: 0;
-  border-radius: 15%;
-  box-shadow: 0 0 1px rgba(128, 128, 128, 0.185);
-  width: 100px;
-  height: 100px;
-  img {
-    width: 5rem !important ;
-    height: 5rem !important;
-  }
-}
-
+.post-card-emoji,
 .post-icon {
   background: #333;
   display: flex;
   justify-content: center;
   align-items: center !important;
   background: var(--tertiary-color);
+  margin: 0;
   border-radius: 15%;
   box-shadow: 0 0 1px rgba(128, 128, 128, 0.185);
-
-  margin: 0;
   width: 100px;
   height: 100px;
   img {
