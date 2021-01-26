@@ -1,24 +1,44 @@
-# Welcome to my Gatsby blog repo!
+# Gatsby blog
 
-## TOC
+## Overview
 
-1. Set up
-2. Commit log
+My blog repository made with [Gatsby.js](https://www.gatsbyjs.com)
 
-## Set up
+## Features
 
-starter: my-hello-world-starter https://github.com/gatsbyjs/gatsby-starter-hello-world
+- SPA
+- Dark mode
+- Manage articles as Markdown file
+- Sort Articles by tag
+- Emoji & SVG to thumbnail
+- Table of Contents at each Post
 
-## Commit log
+## Runnning this project locally
 
-- 2021/01/10
-  Added Google analytics
+Live demo on [here](https://jujekebab.com)
+`gatsby new yourBlogName https://github.com/tofujlg/gatsby-blog`
 
-- 2021/01/08
-  Added Tag functionality
+## Dependencies
 
-- 2021/01/07
-  Styled navbar.
+- [React-icons](https://react-icons.github.io/react-icons/search)
+- Gatsby
+- [node-sass](https://www.npmjs.com/package/node-sass)
+- [prismjs](https://prismjs.com/)
+- [react](https://reactjs.org/)
+- react-dom
+- [react-emoji-render](https://www.npmjs.com/package/react-emoji-render)
+- react-helmet
+- [react-scroll](https://www.npmjs.com/package/react-scroll)
+- Other gatsby plugins
 
-- 2021/01/06
-  Started this project. Built some components and pages. Set up blog enviroment.
+## Dev-Dependencies
+
+- env-cmd
+- prettier
+
+## Others
+
+### Features to be added
+
+- TOC for mobile
+- Style nav bar
