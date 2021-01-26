@@ -2,7 +2,8 @@
 
 ## Overview
 
-My blog repository made with [Gatsby.js](https://www.gatsbyjs.com)
+My blog repository made with React based static site generator, [Gatsby.js](https://www.gatsbyjs.com)
+My goal was to create a fast & user friendly blog, where I can share what I've learnt on web development.
 
 ## Features
 
@@ -17,6 +18,13 @@ My blog repository made with [Gatsby.js](https://www.gatsbyjs.com)
 
 Live demo on [here](https://jujekebab.com)
 `gatsby new yourBlogName https://github.com/tofujlg/gatsby-blog`
+
+## Tech stack
+
+- Gatsby.js
+- React
+- Sass
+- Netlify
 
 ## Dependencies
 
