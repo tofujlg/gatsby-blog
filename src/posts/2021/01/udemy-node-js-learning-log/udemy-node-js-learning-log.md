@@ -1,5 +1,5 @@
 ---
-title: "Node.js学習記　その１"
+title: "Node.js学習記　その1"
 date: "2021-01-21"
 tags: ["Nodejs"]
 hero: ./nodejs.svg
