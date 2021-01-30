@@ -4,6 +4,7 @@
 // Header wrapper
 .header {
   padding: 0.5rem $l-size;
+  margin-bottom: 10rem;
   display: flex;
   justify-content: space-between;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
@@ -50,12 +51,10 @@
 }
 
 .active-nav-item {
-  padding: 0 0 0.33rem 0;
   opacity: 0.5;
 }
 
 //Dark theme toggle switch
-
 .toggle {
   margin: 0.5rem 0 0 1rem;
 }
