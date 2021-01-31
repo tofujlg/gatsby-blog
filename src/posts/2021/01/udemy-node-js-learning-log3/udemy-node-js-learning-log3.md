@@ -199,5 +199,4 @@ Web開発なのにほとんどブラウザを使うことがなかった。チ�
 
 ## 参考
 [Qitta:0からREST APIについて調べてみた](https://qiita.com/masato44gm/items/dffb8281536ad321fb08)
-
 [REST (API)が理解できないのでまとめてみる](https://www.subthread.co.jp/blog/20160506/)
