@@ -25,6 +25,10 @@ const Head = ({ title }) => {
           content: data.site.siteMetadata.author,
         },
         {
+          property: `og:image`,
+          content: `${data.site.siteMetadata.siteUrl}/images/tube.png`,
+        },
+        {
           name: `twitter:title`,
           content: title,
         },
