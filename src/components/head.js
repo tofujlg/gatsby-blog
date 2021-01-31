@@ -8,6 +8,8 @@ const Head = ({ title }) => {
       site {
         siteMetadata {
           title
+          siteUrl
+          description
         }
       }
     }
@@ -34,7 +36,7 @@ const Head = ({ title }) => {
         },
         {
           name: `twitter:description`,
-          content: "Blog post",
+          content: `${data.site.siteMetadata.description}`,
         },
       ]}
     />
