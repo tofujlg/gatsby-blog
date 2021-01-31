@@ -51,10 +51,60 @@
   }
 }
 // Emoji or SVG Thumbnails
-
 .text-wrapper {
   display: flex;
   position: relative;
+
+  .blog-post {
+    background: var(--secondary-color);
+    border-radius: 10px;
+    box-shadow: 0 0 1px rgba(128, 128, 128, 0.185);
+    margin-left: 9rem;
+    width: calc(100% - 400px);
+    max-width: 75rem;
+    padding: 2rem 4rem 6rem 4rem;
+    @media only screen and (max-width: 768px) {
+      width: 100%;
+      padding: 0;
+      margin: 0rem;
+      background: var(--bg-color);
+      box-shadow: none;
+    }
+    // Text decoration
+    line-height: 1.9;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      margin: 4rem 0;
+      border-left: solid 5px #d9bcd8; /*左線*/
+      padding: 0.25em 0.5em;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+    }
+    h3 {
+      font-size: 1.5rem;
+    }
+    ul {
+      margin: 2rem 0;
+      li {
+        margin: 1rem;
+      }
+    }
+    p {
+      margin: 0.5rem 0;
+    }
+    a {
+      color: var(--link-text-color) !important;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
   .toc-wrapper {
     width: 290px;
     //margin-left: 2rem;
@@ -101,59 +151,6 @@
   img {
     width: 13rem !important ;
     height: 13rem !important;
-  }
-}
-
-.blog-post {
-  // wrapper
-  background: var(--secondary-color);
-  border-radius: 10px;
-  box-shadow: 0 0 1px rgba(128, 128, 128, 0.185);
-  margin-left: 9rem;
-  width: calc(100% - 400px);
-  padding: 0 2rem;
-  // TEST
-  width: calc(100% - 300px);
-  padding: 2rem 4rem 6rem 4rem;
-  @media only screen and (max-width: 768px) {
-    width: 100%;
-    padding: 0;
-    margin: 0rem;
-    background: var(--bg-color);
-    box-shadow: none;
-  }
-  // Text decoration
-  line-height: 1.9;
-  h1,
-  h2,
-  h3,
-  h4,
-  h5 {
-    margin: 4rem 0;
-    border-left: solid 5px #d9bcd8; /*左線*/
-    padding: 0.25em 0.5em;
-  }
-
-  h2 {
-    font-size: 1.8rem;
-  }
-  h3 {
-    font-size: 1.5rem;
-  }
-  ul {
-    margin: 2rem 0;
-    li {
-      margin: 1rem;
-    }
-  }
-  p {
-    margin: 0.5rem 0;
-  }
-  a {
-    color: var(--link-text-color) !important;
-    &:hover {
-      text-decoration: underline;
-    }
   }
 }
 

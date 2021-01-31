@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: "k-log",
     author: "Kebeb",
-    description: `フロントエンドエンジニアのKebebの技術ブログです`,
+    description: `Kebebの技術ブログ。主にMERN stackの学習の記録`,
     siteUrl: `https://jujekebab.com/`,
   },
   plugins: [
