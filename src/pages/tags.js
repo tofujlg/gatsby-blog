@@ -4,6 +4,7 @@ import kebabCase from "lodash/kebabCase"
 import { Helmet } from "react-helmet"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
+import Head from "../components/head"
 import tagsStyles from "../styles/pages/tags.module.scss"
 
 const TagsPage = ({
@@ -16,6 +17,7 @@ const TagsPage = ({
 }) => (
   <Layout>
     <Helmet title={title} />
+    <Head title="tags" />
     <div className={tagsStyles.pageWrapper}>
       <div className={tagsStyles.heading}>
         <h3>Tags</h3>

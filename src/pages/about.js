@@ -16,14 +16,8 @@ const AboutPage = () => {
         <h3>このブログについて</h3>
       </div>
       <div className={aboutStyles.profile}>
-      <h3>このブログ</h3>
-      <p>Gatsby製のブログです。</p>
-      <p>主にWeb開発について書いていく予定です。</p>
-      <p>画面右上の白いボタンでダークモード適応できます。是非ご利用ください。</p>
-      <br />
-      <p>このブログはGoogle Analyticsを利用しています。</p>
-      <h3>Me: Kebab<Twemoji text="🥙" /> </h3>
-      <p>フロントエンドよりのエンジニアです。</p>
+      <h3>Blog.author = Kebab<Twemoji text="🥙" /> </h3>
+      <p>フロントエンドよりのエンジニア(駆け出し）です。</p>
       <p>ご連絡はTwitterのDMからお願いします。</p>
       <br/>
 
@@ -40,43 +34,34 @@ const AboutPage = () => {
     </a>
       </div>
       <h3>ぼくの技術スタック</h3>
+      <p>2020年より、Gatsbyに魅了されてMERNstackの学習を開始しました。</p>
+      <br />
       <ul>
         <li>HTML & CSS</li>
         <li>JavaScript</li>
         <li>React</li>
         <li>Gatsby</li>
+        <li>Node.js(勉強中）</li>
       </ul>
-      <h3>その他の特徴</h3>
-      <h4>けっこうわかる言語</h4>
+      <h3>その他</h3>
+      <p>いままで4つの（自然）言語を真剣に学んできました。</p>
       <ul>
         <li>日本語</li>
         <li>English</li>
+        <li>فارسی (ペルシア語)</li>
+        <li>Deutsch (ドイツ語) </li>
       </ul>
-      <h4>ぼちぼちわかる言語</h4>
-      <ul>
-      <li>فارسی</li>
-      <li>Deutsch</li>
-      <h4>好きな映画</h4>
-        <ul>
-          <li>影の列車</li>
-          <li>桜桃の味</li>
-        </ul>
-        <h4>好きな本</h4>
-        <ul>
-        <li>カラマーゾフの兄弟</li>
-        <li>戦争と平和</li>
-        <li>ズボンを履いた猫</li>
-        <li></li>
-      </ul>
-      <h4>尊敬</h4>
-      <ul>
-      <li>アッバス・キアロスタミ</li>
-      <li>ホセ・ルイス・ゲリン</li>
-      <li>小津安二郎</li>
-      <li>レフ・トルストイ</li>
-      <li>ヒョードル・ドストエフスキー</li>
-    </ul>
-    </ul>
+      <br />
+      <p>どちらもしばらくの間は訳がわからなくても淡々とやり続けるのが大切なところなど、</p>
+      <p>言語学習の経験はプログラミング学習に活きているとおもいます。</p>
+      <p>基本的に学習するのが好きなのでプログラミングの学習は楽しくやってます。たまにエラーで吐きそうになりますが。</p>
+      <br />
+
+      <h3>このブログ</h3>
+      <p>Gatsby + Netlify製のブログです。</p>
+      <p>画面右上の白いボタンでダークモード適応できます。</p>
+      <br />
+      <p>このブログはGoogle Analyticsを利用しています。</p>
       </div>
       </div>
     </Layout>

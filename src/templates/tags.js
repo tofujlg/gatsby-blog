@@ -4,6 +4,7 @@ import { Link, graphql } from "gatsby"
 import { Twemoji } from "react-emoji-render"
 import { AiOutlineTag } from "@react-icons/all-files/ai/AiOutlineTag"
 import Layout from "../components/layout"
+import Head from "../components/head"
 import tagsStyles from "../styles/templates/tags.module.scss"
 
 const Tags = ({ pageContext, data }) => {
@@ -15,6 +16,7 @@ const Tags = ({ pageContext, data }) => {
 
   return (
     <Layout>
+      <Head title="tags" />
       <div className={tagsStyles.postsWrapper}>
         <h3>{tagHeader}</h3>
         <ol className={tagsStyles.posts}>

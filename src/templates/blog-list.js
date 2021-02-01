@@ -5,6 +5,7 @@ import { IoMdArrowRoundBack } from "@react-icons/all-files/io/IoMdArrowRoundBack
 import { IoMdArrowRoundForward } from "@react-icons/all-files/io/IoMdArrowRoundForward"
 import { AiOutlineTag } from "@react-icons/all-files/ai/AiOutlineTag"
 import Layout from "../components/layout"
+import Head from "../components/head"
 import blogIndexStyles from "../styles/templates/blog-list.module.scss"
 
 export default class BlogList extends React.Component {
@@ -19,6 +20,7 @@ export default class BlogList extends React.Component {
 
     return (
       <Layout>
+        <Head title="blog-lists" />
         <div className={blogIndexStyles.postsWrapper}>
           <h3>Blog Posts</h3>
           <ol className={blogIndexStyles.posts}>
