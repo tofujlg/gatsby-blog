@@ -1,11 +1,10 @@
 import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
-import { Twemoji } from "react-emoji-render"
-import { AiOutlineTag } from "@react-icons/all-files/ai/AiOutlineTag"
 import Layout from "../components/layout"
 import Head from "../components/head"
 import indexStyles from "../styles/pages/index.module.scss"
 import Bio from "../components/Bio"
+import PostList from "../components/postList"
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -40,6 +39,21 @@ const IndexPage = () => {
       <Head title="Home" />
       <div className={indexStyles.indexWrapper}>
         <h3>Latest Posts</h3>
+        <PostList edges={edges} />
+        <div className={indexStyles.moreArticles}>
+          <Link to="/blog/2">
+            <p>More Posts</p>
+          </Link>
+        </div>
+        <Bio />
+      </div>
+    </Layout>
+  )
+}
+
+export default IndexPage
+
+/*
         <ol className={indexStyles.posts}>
           {edges.map(edge => {
             return (
@@ -74,15 +88,5 @@ const IndexPage = () => {
             )
           })}
         </ol>
-        <div className={indexStyles.moreArticles}>
-          <Link to="/blog/2">
-            <p>More Posts</p>
-          </Link>
-        </div>
-        <Bio />
-      </div>
-    </Layout>
-  )
-}
-
-export default IndexPage
+        
+*/

@@ -1,11 +1,10 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { Link, graphql } from "gatsby"
-import { Twemoji } from "react-emoji-render"
-import { AiOutlineTag } from "@react-icons/all-files/ai/AiOutlineTag"
 import Layout from "../components/layout"
 import Head from "../components/head"
 import tagsStyles from "../styles/templates/tags.module.scss"
+import PostList from "../components/postList"
 
 const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext
@@ -19,6 +18,9 @@ const Tags = ({ pageContext, data }) => {
       <Head title="tags" />
       <div className={tagsStyles.postsWrapper}>
         <h3>{tagHeader}</h3>
+        <PostList edges={edges} />
+        {/*
+
         <ol className={tagsStyles.posts}>
           {edges.map(({ node }) => {
             const { slug } = node.fields
@@ -56,6 +58,8 @@ const Tags = ({ pageContext, data }) => {
             )
           })}
         </ol>
+      */}
+
         {/*
               This links to a page that does not yet exist.
               You'll come back to it!

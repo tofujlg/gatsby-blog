@@ -56,9 +56,9 @@
   position: relative;
 
   .blog-post {
-    background: var(--secondary-color);
+    //background: var(--secondary-color);
+    //box-shadow: 0 0 1px rgba(128, 128, 128, 0.185);
     border-radius: 10px;
-    box-shadow: 0 0 1px rgba(128, 128, 128, 0.185);
     margin-left: 9rem;
     width: calc(100% - 400px);
     max-width: 75rem;

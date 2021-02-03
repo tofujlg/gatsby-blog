@@ -1,16 +1,15 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
-import { Twemoji } from "react-emoji-render"
 import { IoMdArrowRoundBack } from "@react-icons/all-files/io/IoMdArrowRoundBack"
 import { IoMdArrowRoundForward } from "@react-icons/all-files/io/IoMdArrowRoundForward"
-import { AiOutlineTag } from "@react-icons/all-files/ai/AiOutlineTag"
 import Layout from "../components/layout"
 import Head from "../components/head"
+import PostList from "../components/postList"
 import blogIndexStyles from "../styles/templates/blog-list.module.scss"
 
 export default class BlogList extends React.Component {
   render() {
-    const posts = this.props.data.allMarkdownRemark.edges
+    const edges = this.props.data.allMarkdownRemark.edges
     // Vars for pagination
     const { currentPage, numPages } = this.props.pageContext
     const isFirst = currentPage === 1
@@ -23,42 +22,7 @@ export default class BlogList extends React.Component {
         <Head title="blog-lists" />
         <div className={blogIndexStyles.postsWrapper}>
           <h3>Blog Posts</h3>
-          <ol className={blogIndexStyles.posts}>
-            {posts.map(({ node }) => {
-              const title = node.frontmatter.title || node.fields.slug
-              return (
-                <li key={node.fields.slug} className={blogIndexStyles.postCard}>
-                  <Link to={`/blog/${node.fields.slug}`}>
-                    {node.frontmatter.hero ? (
-                      <div className={blogIndexStyles.postIcon}>
-                        <img
-                          src={node.frontmatter.hero.publicURL}
-                          alt="SVGicon"
-                        />
-                      </div>
-                    ) : (
-                      <Twemoji
-                        className={blogIndexStyles.postCardEmoji}
-                        svg
-                        text={node.frontmatter.emoji || "📝"}
-                      />
-                    )}
-                    <div className={blogIndexStyles.postCard__info}>
-                      <h2>{title}</h2>
-                      <h4>{node.frontmatter.date}</h4>
-                      <div className={blogIndexStyles.postCard__tags}>
-                        <p>
-                          <AiOutlineTag size="2rem" />
-                          {node.frontmatter.tags}
-                        </p>
-                      </div>
-                    </div>
-                  </Link>
-                </li>
-              )
-            })}
-          </ol>
-
+          <PostList edges={edges} />
           <ul className={blogIndexStyles.pagination}>
             <li>
               {!isFirst && (

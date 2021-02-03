@@ -1,9 +1,13 @@
 import React from "react"
+import { Link } from "gatsby"
+import { Twemoji } from "react-emoji-render"
+import { AiOutlineTag } from "@react-icons/all-files/ai/AiOutlineTag"
+import indexStyles from "../styles/pages/index.module.scss"
 
-const PostList = () => {
+const PostList = ({ edges }) => {
   return (
     <ol className={indexStyles.posts}>
-      {data.allMarkdownRemark.edges.map(edge => {
+      {edges.map(edge => {
         return (
           <li key={edge.node.fields.slug} className={indexStyles.postCard}>
             <Link to={`/blog/${edge.node.fields.slug}`}>
@@ -38,3 +42,5 @@ const PostList = () => {
     </ol>
   )
 }
+
+export default PostList
