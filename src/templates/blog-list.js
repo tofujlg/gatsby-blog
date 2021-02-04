@@ -10,7 +10,7 @@ import blogIndexStyles from "../styles/templates/blog-list.module.scss"
 export default class BlogList extends React.Component {
   render() {
     const edges = this.props.data.allMarkdownRemark.edges
-    // Vars for pagination
+
     const { currentPage, numPages } = this.props.pageContext
     const isFirst = currentPage === 1
     const isLast = currentPage === numPages
