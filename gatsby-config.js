@@ -48,6 +48,13 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://jujekebab.com`,
+        stripQueryString: true,
+      },
+    },
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-robots-txt`,
   ],

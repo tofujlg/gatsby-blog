@@ -38,9 +38,28 @@ const Head = ({ title }) => {
           name: `twitter:description`,
           content: `${data.site.siteMetadata.description}`,
         },
+        {
+          property: `og:type`,
+          content: `website`,
+        },
       ]}
     />
   )
 }
+
+Head.defaultProps = {
+  lang: `ja`,
+  meta: [],
+  description: ``,
+}
+
+// Head.propTypes = {
+//   description: PropTypes.string,
+//   lang: PropTypes.string,
+//   meta: PropTypes.arrayOf(PropTypes.object),
+//   title: PropTypes.string.isRequired,
+//   image: PropTypes.string, //追加
+//   location: PropTypes.string, //なければ追加
+// }
 
 export default Head

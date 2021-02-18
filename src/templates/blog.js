@@ -37,6 +37,10 @@ export const query = graphql`
 const Blog = props => {
   return (
     <Layout>
+      <Head
+        title={props.data.markdownRemark.frontmatter.title}
+        location={props.location}
+      />
       <div className={blogStyles.postWrapper}>
         {props.data.markdownRemark.frontmatter.hero ? (
           <div
@@ -54,7 +58,6 @@ const Blog = props => {
             text={props.data.markdownRemark.frontmatter.emoji || "📝"}
           />
         )}
-        <Head title={props.data.markdownRemark.frontmatter.title} />
         <h1 className={blogStyles.title}>
           {props.data.markdownRemark.frontmatter.title}
         </h1>
