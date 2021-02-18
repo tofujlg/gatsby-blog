@@ -2,7 +2,7 @@ import React from "react"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-const Head = ({ title }) => {
+const Head = ({ title, description, lang, meta }) => {
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -16,8 +16,15 @@ const Head = ({ title }) => {
   `)
   return (
     <Helmet
+      htmlAttributes={{
+        lang,
+      }}
       title={`${title} | ${data.site.siteMetadata.title}`}
       meta={[
+        {
+          name: `description`,
+          content: `${data.site.siteMetadata.description}`,
+        },
         {
           name: `twitter:card`,
           content: `summary`,
@@ -28,6 +35,22 @@ const Head = ({ title }) => {
         },
         {
           property: `og:image`,
+          content: `${data.site.siteMetadata.siteUrl}/images/tube.png`,
+        },
+        {
+          property: `og:title`,
+          content: title,
+        },
+        {
+          property: `og:description`,
+          content: `${data.site.siteMetadata.description}`,
+        },
+        {
+          property: `og:type`,
+          content: `website`,
+        },
+        {
+          name: `thumbnail`,
           content: `${data.site.siteMetadata.siteUrl}/images/tube.png`,
         },
         {
@@ -52,14 +75,5 @@ Head.defaultProps = {
   meta: [],
   description: ``,
 }
-
-// Head.propTypes = {
-//   description: PropTypes.string,
-//   lang: PropTypes.string,
-//   meta: PropTypes.arrayOf(PropTypes.object),
-//   title: PropTypes.string.isRequired,
-//   image: PropTypes.string, //追加
-//   location: PropTypes.string, //なければ追加
-// }
 
 export default Head
