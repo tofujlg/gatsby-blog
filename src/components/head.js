@@ -2,7 +2,7 @@ import React from "react"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-const Head = ({ title, description, lang, meta }) => {
+const Head = ({ title, description, lang, meta, schemaMarkup }) => {
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -66,7 +66,13 @@ const Head = ({ title, description, lang, meta }) => {
           content: `website`,
         },
       ]}
-    />
+    >
+      {schemaMarkup && (
+        <script type="application/ld+json">
+          {JSON.stringify(schemaMarkup)}
+        </script>
+      )}
+    </Helmet>
   )
 }
 

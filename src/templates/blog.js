@@ -8,6 +8,7 @@ import Layout from "../components/layout"
 import Head from "../components/head"
 import TableOfContents from "../components/tableOfContents"
 import Bio from "../components/Bio"
+import BlogJsonLd from "../components/json/blogJsonLd"
 import blogStyles from "../styles/templates/blog.module.scss"
 
 export const query = graphql`
@@ -40,6 +41,11 @@ const Blog = props => {
       <Head
         title={props.data.markdownRemark.frontmatter.title}
         location={props.location}
+      />
+      <BlogJsonLd
+        title={props.data.markdownRemark.frontmatter.title}
+        date={props.data.markdownRemark.frontmatter.date}
+        url={props.location.href}
       />
       <div className={blogStyles.postWrapper}>
         {props.data.markdownRemark.frontmatter.hero ? (

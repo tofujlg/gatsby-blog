@@ -4,6 +4,7 @@ import Layout from "../components/layout"
 import Head from "../components/head"
 import indexStyles from "../styles/pages/index.module.scss"
 import Bio from "../components/Bio"
+import IndexJsonLd from "../components/json/IndexJsonLd"
 import PostList from "../components/postList"
 
 const IndexPage = () => {
@@ -32,10 +33,13 @@ const IndexPage = () => {
       }
     }
   `)
+
   const { edges } = data.allMarkdownRemark
+
   return (
     <Layout>
       <Head title="Home" />
+      <IndexJsonLd />
       <div className={indexStyles.indexWrapper}>
         <h3>Latest Posts</h3>
         <PostList edges={edges} />
