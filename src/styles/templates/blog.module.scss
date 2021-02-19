@@ -88,14 +88,20 @@
     h3 {
       font-size: 1.5rem;
     }
-    ul {
-      margin: 2rem 0;
+    ol {
+      padding: 2rem 0;
+      padding-left: 3rem;
       li {
         margin: 1rem;
       }
     }
+    ul {
+      padding: 2rem 0;
+      padding-left: 3rem;
+    }
     p {
       margin: 0.5rem 0;
+      margin: 3rem 0;
     }
     a {
       color: var(--link-text-color) !important;
