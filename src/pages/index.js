@@ -12,7 +12,7 @@ const IndexPage = () => {
     query {
       allMarkdownRemark(
         sort: { fields: [frontmatter___date], order: DESC }
-        limit: 7
+        limit: 10
       ) {
         edges {
           node {
