@@ -8,8 +8,6 @@ hero: obsidian.svg
 
 ## ねらい
 
-
-
 ![Calendar1](./mdCalendar1.png)
 
 こんな感じで、[Obsidian](Obsidian.md)で日記を管理するためにマークダウンリンクのついたカレンダーを作成したい。しかし手動で一年分のカレンダーを作成するのは流石に骨が折れます。[Obsidianの公式フォーラム](https://forum.obsidian.md/t/calendar-and-tasks-for-daily-notes/3218/4)でマークダウンカレンダーを自動生成する便利なシェルスクリプトを見つけたので紹介したいと思います。
