@@ -6,7 +6,7 @@ hero: obsidian.svg
 ---
 
 
-## 本文
+## はじめに
 先日、[Obsidian](https://obsidian.md)の個人用のメインボルトに大幅な変更を加えまして、その中でも最大の変更の一つが「ノートのステータス管理」を導入したという点です。
 
 ### 旧来のワークフロー
@@ -63,7 +63,7 @@ url: sample url
 とはいえ、ステータスには厳格な線引きは設定せずに、あくまで自分の直感にまかせます。
 
 ## Dataviewで一覧を表示する。
-フロントマターを追加したら、Dataview Pluginで一気にそれぞれのノートを一覧表示させるようにします。
+フロントマターを追加したら、[Dataview Plugin](https://github.com/blacksmithgu/obsidian-dataview)で一気にそれぞれのノートを一覧表示させるようにします。
 ```sql:title=dataview
 table file.cday AS Created_at
 from ""
