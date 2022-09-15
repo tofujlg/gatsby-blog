@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@react-icons/all-files": "^4.1.0",
-    "gatsby": "^2.26.1",
+    "gatsby": "^4.23.0",
     "gatsby-image": "^2.9.0",
     "gatsby-plugin-canonical-urls": "^2.10.0",
     "gatsby-plugin-dark-mode": "^1.1.2",
