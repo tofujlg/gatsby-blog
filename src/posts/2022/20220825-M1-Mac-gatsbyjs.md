@@ -1,7 +1,7 @@
 ---
 title: "M1 MacbookでのGatsby開発"
 date: "2022-08-20"
-tags: ["obsidian"]
+tags: ["Obsidian"]
 emoji: "💻"
 ---
 
