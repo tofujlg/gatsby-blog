@@ -41,7 +41,7 @@ const IndexPage = () => {
       <Head title="Home" />
       <IndexJsonLd />
       <div className={indexStyles.indexWrapper}>
-        <h3>Latest Posts</h3>
+      {/*  <h3>Latest Posts</h3> */}
         <PostList edges={edges} />
         <div className={indexStyles.moreArticles}>
           <Link to="/blog/2">
