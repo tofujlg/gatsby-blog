@@ -17,10 +17,10 @@ const AboutPage = () => {
       </div>
       <div className={aboutStyles.profile}>
       <h3>Blog.author = Kebab<Twemoji text="🥙" /> </h3>
-      <p>フロントエンドよりのエンジニア(駆け出し）です。</p>
+      <p>フロントエンドよりのエンジニアです。</p>
+     <a href="https://tofujlg.github.io./" target="_blank" rel="noreferrer">詳しくはこちらのレジュメをご覧ください</a>
       <p>ご連絡はTwitterのDMからお願いします。</p>
       <br/>
-
       <div className={aboutStyles.snsWrapper}>
       <a
       rel="noreferrer"
