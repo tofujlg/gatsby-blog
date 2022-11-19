@@ -7,6 +7,10 @@ import Head from "../components/head"
 import aboutStyles from '../styles/pages/about.module.scss'
 
 
+const aStyle = {
+  color:'#red !important'
+}
+
 const AboutPage = () => {
   return (
     <Layout>
@@ -18,8 +22,11 @@ const AboutPage = () => {
       <div className={aboutStyles.profile}>
       <h3>Blog.author = Kebab<Twemoji text="🥙" /> </h3>
       <p>フロントエンドよりのエンジニアです。</p>
-     <a href="https://tofujlg.github.io./" target="_blank" rel="noreferrer">詳しくはこちらのレジュメをご覧ください</a>
+     <a style={aStyle} href="https://tofujlg.github.io./" target="_blank" rel="noreferrer"><span aria-label="Resume" role="img">📄</span>レジュメはこちらご覧ください</a>
+      <br/>
+      <br/>
       <p>ご連絡はTwitterのDMからお願いします。</p>
+      <br/>
       <br/>
       <div className={aboutStyles.snsWrapper}>
       <a
@@ -33,7 +40,9 @@ const AboutPage = () => {
       <RiGithubLine size="4rem" />
     </a>
       </div>
-      <h3>ぼくの技術スタック</h3>
+
+      <br/>
+      {/*        <h3>ぼくの技術スタック</h3>
       <p>2020年より、Gatsbyに魅了されてMERNstackの学習を開始しました。</p>
       <br />
       <ul>
@@ -56,6 +65,7 @@ const AboutPage = () => {
       <p>言語学習の経験はプログラミング学習に活きているとおもいます。</p>
       <p>基本的に学習するのが好きなのでプログラミングの学習は楽しくやってます。たまにエラーで吐きそうになりますが。</p>
       <br />
+*/}
 
       <h3>このブログ</h3>
       <p>Gatsby + Netlify製のブログです。</p>
